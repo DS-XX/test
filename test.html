@@ -1,0 +1,18 @@
+<body>
+    <script id="users" type="text/template">
+        <% if (names.length) { %>
+            <ul>
+                <% names.forEach(function(name){ %>
+                    <li><%= name%></li>
+                <% }) %>
+            </ul>
+        <% } %>
+    </script>
+      <script type="text/javascript" src="./js/ejs.js"> </script>
+      <script>
+        var users = document.getElementById("users").innerHTML;
+        var namesArr = ['zhangsan','lisi','wangwu']; // 从接口中获取
+        var html  = ejs.render(users,{names:namesArr});
+        document.body.innerHTML = html;
+    </script>
+</body>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <script src="./layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
+  </head>
+  <body>
+      <div class="navigation">
+        <!-- 白色地的顶部 查找 -->
+        <div class="pm_head_white">
+          <img
+            src='./images/pc/pm/head1.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head2.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head3.svg'
+            alt=''
+            />
+          <div class="search">
+            <input class="view_input" placeholder="Search" />
+            <img src='./images/pc/pm/head_search.svg' />
+          </div>
+        </div>
+        <div class="contain_main">
+          <!-- 导航 箭头 -->
+          <div class="chooseItem">
+            <a>Properties</a>
+            <img
+            src='./images/pc/pm/bread-arrow.svg'
+            alt=''
+            />
+            <a class="select">Property</a>
+          </div>
+          <div class="title_properties">
+            <h1>PROPERTIES</h1>
+            <span>Add New</span>
+        </div>
+        <div class="properties_card">
+            <div class="top_content">
+                <div class="left_filter">
+                    Filter by:
+                    <select><option>New Westminster</option></select>
+                    <select><option>ACTIVE</option></select>
+                </div>
+                <div class="right_search">
+                    Search:
+                    <input />
+                    <input />
+                    <input />
+                    <span>Search</span>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr id='t_head'>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bottom">
+                <p class="Viewing">Viewing 6 out of 100</p>
+                <div class="bottom_total">
+                    Total:
+                    <div>
+                        <span>$1,000,000</span>
+                        <span>$1,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_page">
+                <span>First</span>
+                <div class="middle">
+                    <span>
+                        <img src='./images/pc/pm/page_left.svg' />
+                    </span>
+                    <div id='page'>
+                        <span></span>
+                        <span></span>
+                        <span>...</span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>
+                        <img src='./images/pc/pm/page_right.svg' />
+                    </span>
+                </div>
+                <span>Last</span>
+            </div>
+            
+        </div>
+        </div>
+      <div>
+
+    </div>
+  </div>
+      
+</div>
+
+</div>
+<script type="text/javascript">
+const name = new Array('PM ID','LANDLORD', 'PHOTO' ,'PROPERTY ADDRESS','CITY' ,'DECSC-RIPTION','MONTHS LEFT','MONTHLY INCOME','BALANCE IN TRUST' ,'STATUS');
+console.log(typeof(name));
+for(var i=0;i<name.length;i++){
+    if(i<4){
+        document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+    }
+    else{
+        document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
+    }
+}
+</script>
+<!-- 点击后变背景颜色 -->
+<script type="text/javascript">
+var curObj = null;
+var preColor;
+onload = function(){
+    var a = document.getElementById("page").getElementsByTagName("span");
+    console.log(a,'这个是a');
+    for(var i=0;i<a.length;i++){
+        a[i].onclick = (function(obj){
+            return function(){
+                if(curObj!=null) curObj.style.backgroundColor = preColor;
+                preColor = obj.style.backgroundColor;
+                obj.style.backgroundColor = "#F6F8F7";
+                curObj = obj;
+            }
+        })(a[i]);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <script src="./layui/layui.js"></script>
+    <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
+  </head>
+  <body>
+      <div class="navigation">
+        <!-- 白色地的顶部 查找 -->
+        <div class="pm_head_white">
+          <img
+            src='./images/pc/pm/head1.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head2.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head3.svg'
+            alt=''
+            />
+          <div class="search">
+            <input placeholder="Search" />
+            <img src='./images/pc/pm/head_search.svg' />
+          </div>
+        </div>
+        <div class="contain_main">
+          <!-- 导航 箭头 -->
+          <div class="chooseItem">
+            <a>Properties</a>
+            <img
+            src='./images/pc/pm/bread-arrow.svg'
+            alt=''
+            />
+            <a class="select">Property</a>
+          </div>
+          <!-- 导航栏 白色 选中蓝色 -->
+          <ul class="navigation_white">
+          <li class="select">Property</li>
+          <li>Landlord</li>
+          <li>Tenant</li>
+          <li>Accounts Receivable</li>
+          <li>Management</li>
+          <li>Non-Resident Tax</li>
+          <li>Accounts Payable</li>
+          <li>Pay to Landlord</li>
+          <li>Files</li>
+          <li>Summary</li>
+          </ul>
+          <!-- PROPERTY INFO -->
+          <div class="navigation_info">
+            <h1>PROPERTY INFO</h1>
+            <h2>ADDress:57355 NO.3a</h2>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
+            <p>
+              Ref ID: R008-2021-07-0002
+            </p>
+            <p>PM ID: PM12345</p>
+          </div>
+          <div class="tenant_card" id='select1'>
+              <div class="top_add">
+                <h1>Tenant 1</h1>
+                <span>Add New</span>
+              </div>
+              <div class="personal">
+                  <h1>Personal</h1>
+                  <div class="cheque">
+                      <div class="choose">
+                          <input type="radio" name="per_cor"/>
+                          Personal
+                      </div>
+                      <div class="row_line">
+                          <div>
+                              <h1>First Name</h1>
+                              <input />
+                          </div>
+                          <div>
+                            <h1>Last Name</h1>
+                            <input />
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="personal">
+                <h1>Corporation</h1>
+                <div class="cheque">
+                    <div class="choose">
+                        <input type="radio" name="per_cor"/>
+                        Corporation
+                    </div>
+                    <div class="row_line">
+                        <div>
+                            <h1>Company Name</h1>
+                            <input />
+                        </div>
+                        <div>
+                            <h1>GST # (optional)</h1>
+                            <input />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row_line">
+                <div>
+                  <h1>Apt #</h1>
+                  <input placeholder="Apt #">
+                </div>
+                <div>
+                  <h1>Street #</h1>
+                  <input placeholder="Street # ">
+                </div><div>
+                  <h1>Street Name</h1>
+                  <input placeholder="Street name">
+                </div>
+              </div>
+            <div class="row_line">
+            <div>
+                <h1>City</h1>
+                <input placeholder="City here">
+            </div>
+            <div>
+                <h1>Province/Territory/Area</h1>
+                <select>
+                    <option>British Columbia</option>
+                </select>
+            </div>
+            <div>
+                <h1>Country</h1>
+                <input placeholder="Country here">
+            </div>
+            <div>
+                <h1>Postal Code</h1>
+                <input placeholder="Postal code here">
+                </div>
+            </div>
+            <div class='row_line'>
+                <div>
+                    <h1>Phone 1 (optional)</h1>
+                    <input placeholder='Phone here'/>
+                </div>
+                <div>
+                    <h1>Phone 2 (optional)</h1>
+                    <input placeholder='Phone here'/>
+                </div>
+                <div>
+                    <h1>Phone 3 (optional)</h1>
+                    <input placeholder='Phone here'/>
+                </div>
+            </div>
+            <div class='row_line'>
+                <div>
+                    <h1>Email 1 (optional)</h1>
+                    <input placeholder='Email here'/>
+                </div>
+                <div>
+                    <h1>Email 2 (optional)</h1>
+                    <input placeholder='Email here'/>
+                </div>
+                <div>
+                    <h1>Email 3 (optional)</h1>
+                    <input placeholder='Email here'/>
+                </div>
+            </div>
+          </div>
+          <div class="tenant_card" id='select2'>
+              <div class="top_add">
+                <h1>Rent Payment OptionS</h1>
+              </div>
+              <div class="personal">
+                  <h1>Post-dated Cheque</h1>
+                  <div class="choose">
+                      <input type="radio" name="cheque"/>
+                      Post-dated Cheque
+                  </div>
+              </div>
+              <div class="personal">
+                <h1>PAD (Pre-Authorized Debit)</h1>
+                <div class="cheque">
+                    <div class="choose">
+                        <input type="radio" name="cheque"/>
+                        PAD (Pre-Authorized Debit) 
+                    </div>
+                    <div id="banks"></div>
+                </div>
+                
+            </div>
+          </div>
+          <div class="bottom_submit">
+            <div class="cancel">Cancel</div>
+            <div class="next">Next</div>
+          </div>
+        </div>
+      <div>
+
+    </div>
+  </div>
+      
+</div>
+
+</div>
+<!-- 点击后变背景颜色 -->
+<script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+<!-- 选择相应的选项之后背景颜色变化 -->
+<script type="text/javascript">
+ onload = function(){
+        var nameList = new Array('per_cor','cheque');
+        nameList.map(function(item,i){
+            var target = document.getElementById(`select${i+1}`);
+            var personal = target.getElementsByClassName('personal');
+            var a = document.getElementsByName(item);
+            a[0].checked = true;
+            personal[0].style.backgroundColor = "#EEF5FF";
+            for( var i=0;i<a.length;i++){
+                a[i].onclick = (function(obj,i){
+                return function(){
+                    for(var j=0;j<personal.length;j++){
+                        if(j==i){
+                            continue;
+                        }
+                        else{
+                            personal[j].style.backgroundColor = "#FFFFFF";
+                        }
+                    }
+                    personal[i].style.backgroundColor = "#EEF5FF";;
+                }
+            })(a[i],i);
+            }
+        })
+    }
+</script>
+<!-- 渲染银行 -->
+<script type="text/javascript">
+    var bank_img = new Array('td','rbc','bmo','scotia','cibc','hsbc','vancity','coast','national','cwb');
+    var a = document.getElementById('banks');
+    for(var i=0 ;i<3;i++){
+      a.innerHTML+="<div class='select_bank'></div>";
+      for(var j=0;j<4;j++){
+        var b = document.getElementsByClassName('select_bank')[i];
+        if(i*4+j<bank_img.length){
+          b.innerHTML+=`<input type='radio' name=option_bank /><div><img src='./images/pc/pm/${bank_img[i*4+j]}.png'/></div>`;
+        }
+        else if(i==2 && j==3){}
+        else{
+          b.innerHTML+=`<input type='radio' name=option_bank />other`;
+        }
+      }
+    }
+  </script>
+  </body>
+</html>
