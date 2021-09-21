@@ -5,6 +5,30 @@
     align-items: flex-start;
     width: 100%;
 }   
+.navigation .black .my_modal{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 600px;
+    position: fixed;
+    margin:0;
+    background-color: firebrick;
+}
+.my_modal input{
+    
+}
+.navigation .black{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
 .navigation .pm_head_white{
     display: flex;
     flex-direction: row;
