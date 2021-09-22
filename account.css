@@ -1,0 +1,59 @@
+.account_receivable{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.account_receivable .top_select_add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.account_receivable .top_select_add .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.account_receivable .top_select_add .left div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 46px;
+    width: 181px;
+    background: rgba(34, 98, 198, 0.15);
+    border: 1px solid rgba(34, 98, 198, 0.5);
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+
+color: rgba(34, 98, 198, 0.5);
+}
+.account_receivable .top_select_add .left .select{
+    background: #FFFFFF;
+    color: #2262C6;
+    border: none;
+    border-radius: 3px 3px 0 0;
+}
+.account_receivable .top_select_add .add{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+    background: #00ADAD;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+

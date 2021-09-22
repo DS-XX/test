@@ -12,6 +12,8 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="./row_line.css" />
     <link rel="stylesheet" href="./layui/css/layui.css" />
     <script src="./layui/layui.js"></script>
     <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
@@ -72,9 +74,9 @@
               <p>PM ID: PM12345</p>
             </div>
             <div>
-              <span style="background: #2262C6;">Renew Term</span>
-              <span style="background: #FF5B60;">Terminate</span>
-              <span style="background: #00517D;" id="btn">Edit</span>
+              <span style="background: #2262C6;" id="renew">Renew Term</span>
+              <span style="background: #FF5B60;"  id="terminate">Terminate</span>
+              <span style="background: #00517D;"  id="edit">Edit</span>
             </div>
           </div>
           <!-- PROPERTY -->
@@ -203,52 +205,196 @@
             <div class="next">Next</div>
           </div>
         </div>
-        <div class="black" id="modal_out">
-          <div id="myModal" class="my_modal">
-            <div>这个是我们的弹窗</div>
-            <div>这个是我们的弹窗</div>
-            <div>这个是我们的弹窗</div>
-            <div>这个是我们的弹窗</div>
-            <input type="file" name="file" accept="image/*" id="upload" >
+         <!-- 这个是renew -->
+        <div class="black_background">
+          <div class="my_modal" id="renew_modal" style="width:650px">
+            <div class="head_blue" style="background:#2262C6;color: #FFFFFF;">
+              Renew Management Term
+             </div>
+         <div class="property_contain">
+            <!-- 引入公共样式 -->
+            <div id='public'></div>
+            <div>
+              <h1>Extend Months</h1>
+              <input type="number"/>
+            </div>
+            <div>
+              <h1>Renew Fee</h1>
+              <input type="number"/>
+            </div>
+            <div>
+              <h1>GST</h1>
+              <p>$100</p>
+            </div>
+            <div class="row" style="justify-content: space-between;margin-bottom: 40px;">
+              <h1>Balance in Trust</h1>
+              <h1 style="color: #00ADAD;">$1,234.00</h1>
+            </div>
+            <div class="bottom_submit" style="justify-content: flex-start;">
+              <div class="cancel">Cancel</div>
+              <div class="next">Save</div>
+
+            </div>
+          </div>
+       </div>
+       </div>
+
+        <!-- 这个是terminate -->
+        <div class="black_background">
+          <div class="my_modal" id="terminate_modal" style="width:650px">
+            <div class="head_blue" style="background: #FF5B60;">
+              Terminate Management Term
+           </div>
+           <div class="property_contain">
+              <h1>Termination Date</h1>
+              <div id="begin-date" style="width: 300px;margin: 10px 0;"></div>
+              <!-- 引入公共样式 -->
+              <div id='public'></div>
+              <div style="margin-bottom: 20px;">
+                <h1>Deposit</h1>
+                <p>$635.00</p>
+              </div>
+              <div class="row" style="justify-content: space-between;margin-bottom: 40px;">
+                <h1>Balance in Trust</h1>
+                <h1 style="color: #00ADAD;">$1,234.00</h1>
+              </div>
+              <div class="bottom_submit" style="justify-content: flex-start;">
+                <div class="cancel">Cancel</div>
+                <div class="next">Save</div>
+              </div>
+           </div>
           </div>
         </div>
-        
       <div>
 
     </div>
   </div>
-  <script type="text/javascript">
-   window.onload=function () {
-    //获取弹窗按钮
-    var btn=document.getElementById("btn");
-    // var close=document.getElementsByClassName("close")[0];
-    var myModal=document.getElementById("myModal");
-    var modal_out = document.getElementById("modal_out");
-    
-    //按钮绑定事件
-    btn.onclick=function () {
-      //获取弹窗
-      myModal.style.display="block";
-      modal_out.style.display="block";
-    }
-    close.onclick=function () {
-      myModal.style.display="none";
-    }
-    //用户点击其他地方关闭弹窗
-    window.onclick=function (event) {
-      // if(event.target !=myModal && event.target != btn){
-      // myModal.style.display="none";
-      // modal_out.style.display="none";
-      // }
-      if(event.target == modal_out){
-      myModal.style.display="none";
-      modal_out.style.display="none";
-      }
-      
-    }
-    }
+  <script type="text/javascript" src="./js/jquery-3.5.1/jquery-3.5.1.min.js">
+  
   </script>
-      
+  <!-- 弹窗 -->
+  <script type="text/javascript">
+    window.onload=function () {
+      var choose;
+     //获取弹窗按钮
+     var renew=document.getElementById("renew");
+     var terminate=document.getElementById("terminate");
+     var edit=document.getElementById("edit");
+
+     // var close=document.getElementsByClassName("close")[0];
+     var renew_modal=document.getElementById("renew_modal");
+     var terminate_modal=document.getElementById("terminate_modal");
+     var edit_modal=document.getElementById("edit_modal");
+     var modal_out = document.getElementsByClassName("black_background");
+     //按钮绑定事件
+     renew.onclick=function () {
+       //获取弹窗
+       renew_modal.style.display="flex";
+       modal_out[0].style.display="flex";
+       autoCenter(renew_modal);
+       document.documentElement.style.overflow="hidden";
+      $('#public').load('modal_public.html');
+      choose = renew_modal;
+     }
+     terminate.onclick=function () {
+       //获取弹窗
+       terminate_modal.style.display="flex";
+       modal_out[1].style.display="flex";
+       choose = terminate_modal;
+     }
+    //  edit.onclick=function () {
+    //    //获取弹窗
+    //    renew_modal.style.display="flex";
+    //    modal_out.style.display="flex";
+    //  }
+     //用户点击其他地方关闭弹窗
+     window.onclick=function (event) {
+       var x=0;
+      for(var i=0; i<modal_out.length;i++){
+        if(modal_out[i].style.display && modal_out[i].style.display == 'flex'){
+          x=i;
+          break;
+        }
+      }
+       if(event.target == modal_out[x]){
+         if(renew_modal){
+          renew_modal.style.display="none";
+         }
+         if(terminate_modal){
+          terminate_modal.style.display="none";
+         }
+         if(edit_modal){
+          edit_modal.style.display="none";
+         }
+          modal_out[x].style.display="none";
+        document.documentElement.style.overflow="auto";
+       }
+       
+     }
+    //  跟随窗口的变换变换位置
+    window.onresize = function(){
+          autoCenter(choose);
+      };
+    
+     }
+    function autoCenter(el){  
+        //获取可见窗口大小
+        var bodyW = document.documentElement.clientWidth;
+        var bodyH = document.documentElement.clientHeight;
+        //获取对话框宽、高
+        var elW = el.offsetWidth;
+        var elH = el.offsetHeight;
+
+        el.style.left = (bodyW - elW)/2 + 'px';
+        // el.style.top = (bodyH - elH)/2 + 'px';
+      };
+   </script>
+    <script type="text/javascript" src="./dist/calendar.min.js"></script>
+    <!-- 日历的js -->
+    <script type="text/javascript">
+      var startTime= 0;
+      var endTime =0;
+      var eBegin = document.getElementById("begin-date"),
+        eEnd = document.getElementById("end-date");
+      var img = document.getElementById("calendar_img");
+      var beginCal = new PCalendar({
+        target:eBegin,
+        date:new Date(2000,0,1),
+        type:"hide",
+        format:format,
+        img:"./images/pc/pm/calendar.svg",
+        callback:function(date,format){
+          startTime = new Date(format);
+        }
+      });
+   
+      var endCal = new PCalendar({
+        target:eEnd,
+        date:new Date(2017,0,6),
+        type:"hide",
+        format:format,
+        img:"./images/pc/pm/calendar.svg",
+        callback:function(date,format){
+          endTime = new Date(format);
+          if(startTime!= 0){
+            between = parseInt(parseInt(endTime-startTime)/1000/3600/24/30);
+            console.log(between)
+            if(between>1){
+              document.getElementById('TimeD').innerHTML=`Term: ${between} Months`
+            }
+          else{
+              document.getElementById('TimeD').innerHTML=`Term: ${between} Month`
+            }
+          }
+        }
+      });
+   
+      function format(date){//MM/DD/YYYY
+        var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
+        var day = date.getDate()<10?"0"+date.getDate():date.getDate();
+        return month+"/"+day+"/"+date.getFullYear();
+      }
+    </script>
 </div>
 
 </div>

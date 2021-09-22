@@ -1,0 +1,340 @@
+
+.black_background .my_modal{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 1115px;
+    height: 800px;
+    position: fixed;
+    margin:auto;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(34, 98, 198, 0.15);
+    border-radius: 3px;
+    top: 24px;
+    left: 100px;
+    box-sizing: border-box;
+}
+.black_background{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0,0,0,.3);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.black_background .my_modal .head_blue{
+    padding: 17px 20px;
+    box-sizing: border-box;
+    background: #2262C6;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.black_background .my_modal .contain{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 30px 20px;
+    background-color: #FFFFFF;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+}
+.black_background  .my_modal .contain .select_1{
+    border: 1px solid rgba(34, 98, 198, 0.5);
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}   
+.black_background  .my_modal .contain .select_1 .title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #2262C6;
+    width: 220px;
+
+}
+.black_background  .my_modal .contain .select_1 .cheque{
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    flex: 1;
+}
+.black_background  .my_modal .contain .select_1 .cheque .choose{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    margin-bottom: 20px;
+}
+.black_background  .my_modal .contain .select_1 .cheque .choose input{
+    margin-right: 10px;
+}
+
+.black_background .my_modal .property_contain{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    flex: 1;
+}
+.black_background .my_modal .property_contain .row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.black_background .my_modal .property_contain h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    margin-right: 5px;
+}
+.black_background .my_modal .property_contain p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    width: 435px;
+}
+.black_background .my_modal .property_contain input{
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    Height: 40px;
+    padding: 10px;
+}
+.black_background .my_modal .property_contain img{
+    margin:10px 0;
+}
+.black_background .my_modal .search_landlord_main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    flex: 1;
+}
+.black_background .my_modal .search_landlord_main .small_title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 20px;
+    color: #2262C6;
+}
+.black_background .my_modal .search_landlord_main .search_btn{
+    background: #2262C6;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+}
+.black_background .my_modal .search_landlord_main .big_title{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #2262C6;
+}
+.black_background .my_modal .search_landlord_main .under_big{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    margin-bottom: 10px;   
+}
+.black_background .my_modal .search_landlord_main .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.black_background .my_modal .search_landlord_main .select_1{
+    border: 1px solid rgba(34, 98, 198, 0.5);
+    box-sizing: border-box;
+    border-radius: 3px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.black_background .my_modal .search_landlord_main .select_1 .row input{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.black_background .my_modal .search_landlord_main .select_1 .row p{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #2262C6;
+}
+.black_background .my_modal .search_landlord_main .not_found{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FF5B60;
+    margin-bottom: 20px;
+}
+.black_background .my_modal .search_landlord_main .not_found p{
+    color: #00ADAD;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.black_background .my_modal .search_landlord_main .error{
+    background: #FFF2F2;
+    border: 1px solid #FF5B60;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+.black_background .my_modal .add_account_main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.black_background .my_modal .add_account_main .column{
+    display: flex;
+    flex-direction: column;
+    margin:10px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+}
+.black_background .my_modal .add_account_main .column p{
+    color: #00ADAD;
+    font-weight: bold;
+}
+.black_background .my_modal .add_account_main .column h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    margin-bottom: 5px;
+}
+.black_background .my_modal .add_account_main .column .input{  
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    height: 40px;
+    width: 300px;
+    outline: none;
+    padding: 10px;
+}
+.black_background .my_modal .add_account_main .column .upload{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px;
+    height: 40px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.black_background .my_modal .add_account_main .column .upload div{  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #2262C6;
+    width: 50px;
+    height: 100%;
+}   
+.black_background .my_modal .add_account_main .column input::placeholder{  
+    color: #C4C4C4;
+}
+.black_background .my_modal .row{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.black_background .my_modal .row h1{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    margin-right: 5px;
+}
+.black_background .my_modal .row p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    color: #505050;
+    width: 435px;
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./row_line.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="./account.css" />
+    <link rel="stylesheet" href="./table.css" />
+
+    <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
+  </head>
+  <body>
+      <div class="navigation">
+        <!-- 白色地的顶部 查找 -->
+        <div class="pm_head_white">
+          <img
+            src='./images/pc/pm/head1.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head2.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head3.svg'
+            alt=''
+            />
+          <div class="search">
+            <input placeholder="Search" />
+            <img src='./images/pc/pm/head_search.svg' />
+          </div>
+        </div>
+        <div class="contain_main">
+          <!-- 导航 箭头 -->
+          <div class="chooseItem">
+            <a>Properties</a>
+            <img
+            src='./images/pc/pm/bread-arrow.svg'
+            alt=''
+            />
+            <a class="select">Property</a>
+          </div>
+          <!-- 导航栏 白色 选中蓝色 -->
+          <ul class="navigation_white">
+          <li class="select">Property</li>
+          <li>Landlord</li>
+          <li>Tenant</li>
+          <li>Accounts Receivable</li>
+          <li>Management</li>
+          <li>Non-Resident Tax</li>
+          <li>Accounts Payable</li>
+          <li>Pay to Landlord</li>
+          <li>Files</li>
+          <li>Summary</li>
+          </ul>
+          <!-- PROPERTY INFO -->
+          <div class="navigation_info">
+            <h1>PROPERTY INFO</h1>
+            <h2>ADDress:57355 NO.3a</h2>
+            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
+            <p>
+              Ref ID: R008-2021-07-0002
+            </p>
+            <p>PM ID: PM12345</p>
+          </div>
+          <!-- 这个是内容 -->
+          <div class="account_receivable">
+              <div class="top_select_add">
+                <div class="left">
+                    <div class="select">ACCOUNTS RECEIVABLE</div>
+                    <div>STATUS HISTORY</div>
+                </div>
+                <div class="add">
+                    Add New
+                </div>
+              </div>
+              <div class="properties_card" style="border-radius: 0 3px 3px 3px;">
+            <div class="top_content">
+                <div class="left_filter">
+                    Filter by:
+                    <select><option>New Westminster</option></select>
+                    <select><option>ACTIVE</option></select>
+                </div>
+                <div class="right_search">
+                    Search:
+                    <input />
+                    <input />
+                    <input />
+                    <span>Search</span>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr id='t_head'>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th><div class="status">
+                            <img src="./images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                            PENDING
+                            <img src="./images/pc/pm/pencil.svg" style="width: 16px;height: 16px;margin-left: 10px;"/>
+                        </div></th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bottom">
+                <p class="Viewing">Viewing 6 out of 100</p>
+                <div class="bottom_total">
+                    Total:
+                    <div>
+                        <span>$1,000,000</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_page">
+                <span>First</span>
+                <div class="middle">
+                    <span>
+                        <img src='./images/pc/pm/page_left.svg' />
+                    </span>
+                    <div id='page'>
+                        <span></span>
+                        <span></span>
+                        <span>...</span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span>
+                        <img src='./images/pc/pm/page_right.svg' />
+                    </span>
+                </div>
+                <span>Last</span>
+            </div>
+            
+        </div>
+          </div>
+          <div class="bottom_submit">
+            <div class="cancel">Previous</div>
+            <div class="next">Next</div>
+          </div>
+        </div>
+        <div class="black_background" id="modal_out" style="display: flex;">
+            <div class="my_modal" id="my_modal" style="display: flex;width: 650px;max-height: 700px;">
+              <div class="head_blue">
+                Add Landlord(s)
+              </div>
+              <div class="add_account_main">
+                    <div class="row">
+                        <h1>Brokerage:</h1>
+                        <p>Remax Crest</p>
+                    </div>
+                    <div class="row">
+                        <h1>Office:</h1>
+                        <p>Richmond</p>
+                    </div>
+                    <div class="row">
+                        <h1>Agent:</h1>
+                        <p>Jason Wang</p>
+                    </div>
+                    <div class="column">
+                        <h1>Due Date</h1>
+                        <div id='begin-date' style='width: 300px;'>
+                    </div>
+                    <div class="column">
+                        <h1>Type</h1>
+                        <select class="input">
+                            <option>Select type</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <h1>Amount</h1>
+                        <input class="input" placeholder="Amount here" />
+                    </div>
+                    <div class="column">
+                        <h1>Total Amount</h1>
+                        <p>$1,000</p>
+                    </div>
+                    <div class="column">
+                        <h1>Status</h1>
+                        <select class="input">
+                            <option>Select status</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <h1>Upload Receipt</h1>
+                        <div class="upload">
+                            <div>
+                                <img src="./images/pc/pm/upload.svg"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_submit" style="justify-content: flex-start;margin-top: 10px;">
+                        <div class="cancel">Cancel</div>
+                        <div class="next">Save</div>
+                    </div>
+              </div>
+            </div>
+        </div>
+
+</div>
+<script type="text/javascript">
+    const name = new Array('ID','PAY TO', 'DUE DATE' ,'TYPE','PAYMENT METHOD' ,'AMOUNT','RECEIPT','STATUS');    console.log(typeof(name));
+    for(var i=0;i<name.length;i++){
+        if(name[i]=='AMOUNT'){
+            document.getElementById('t_head').innerHTML+=`<th id='amount'>${name[i]}</th>`;
+        }
+        document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+        // else{
+        //     document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
+        // }
+    }
+    </script>
+     <script type="text/javascript" src="./dist/calendar.min.js"></script>
+     <!-- 日历的js -->
+     <script type="text/javascript">
+       var startTime= 0;
+       var endTime =0;
+       var eBegin = document.getElementById("begin-date"),
+         eEnd = document.getElementById("end-date");
+       var img = document.getElementById("calendar_img");
+       var beginCal = new PCalendar({
+         target:eBegin,
+         date:new Date(2000,0,1),
+         type:"hide",
+         format:format,
+         img:"./images/pc/pm/calendar.svg",
+         callback:function(date,format){
+           startTime = new Date(format);
+         }
+       });
+    
+       var endCal = new PCalendar({
+         target:eEnd,
+         date:new Date(2017,0,6),
+         type:"hide",
+         format:format,
+         img:"./images/pc/pm/calendar.svg",
+         callback:function(date,format){
+           endTime = new Date(format);
+           if(startTime!= 0){
+             between = parseInt(parseInt(endTime-startTime)/1000/3600/24/30);
+             console.log(between)
+             if(between>1){
+               document.getElementById('TimeD').innerHTML=`Term: ${between} Months`
+             }
+           else{
+               document.getElementById('TimeD').innerHTML=`Term: ${between} Month`
+             }
+           }
+         }
+       });
+    
+       function format(date){//MM/DD/YYYY
+         var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
+         var day = date.getDate()<10?"0"+date.getDate():date.getDate();
+         return month+"/"+day+"/"+date.getFullYear();
+       }
+     </script>
+  </body>
+</html>

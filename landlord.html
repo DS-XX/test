@@ -12,7 +12,10 @@
       content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./row_line.css" />
+    <link rel="stylesheet" href="./yes_no.css" />
     <link rel="stylesheet" href="./layui/css/layui.css" />
+
     <script src="./layui/layui.js"></script>
     <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
   </head>
@@ -73,7 +76,7 @@
           <div class="landlord_card">
               <div class="top_add">
                 <h1>Landlord 1</h1>
-                <span>Add New</span>
+                <span id="add_new">Add New</span>
               </div>
               <div class="row_line">
                   <div>
@@ -162,7 +165,7 @@
                   <h1 style="margin-bottom: 15px;">MONTHLY STATEMENT EMAILS</h1>
                 </div>
                 <p class="automatic">
-                    Turn on automatic Monthly Statements for all emails. 
+                  Turn on automatic Monthly Statements for all emails.
                 </p>
                 <div id="select" class="select">
                     <div>
@@ -274,8 +277,143 @@
             <div class="next">Next</div>
           </div>
         </div>
+        <!-- 弹窗 -->
+        <div class="black" id="modal_out">
+          <div class="my_modal" id="my_modal">
+            <div class="head_blue">
+              Add Landlord(s)
+            </div>
+            <div class="contain">
+              <!-- 两个选择框 1 -->
+              <div class="select_1" >
+                <h1 class="title">Personal</h1>
+                <div class="cheque">
+                  <div class="choose">
+                    <input type="radio" name="per_cor">
+                    Personal
+                  </div>
+                  <div class="row_line">
+                    <div>
+                      <h1>First Name</h1>
+                      <input placeholder="First Name"/>
+                    </div>
+                    <div>
+                      <h1>Last Name</h1>
+                      <input placeholder="Last Name"/>
+                    </div>
+                    <div>
+                      <h1>Birth date (optional)</h1>
+                      <div id="begin-date" style="width: 200px;">
+                      </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+              <!-- 两个选择框 2 -->
+            <div class="select_1" >
+              <h1 class="title">Corporation</h1>
+              <div class="cheque">
+                <div class="choose">
+                  <input type="radio" name="per_cor">
+                  Corporation
+                </div>
+                <div class="row_line">
+                  <div>
+                    <h1>Company Name</h1>
+                    <input placeholder="1234567 BC LTD"/>
+                  </div>
+                  <div>
+                    <h1>GST # (optional)</h1>
+                    <input placeholder="GST #"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="automatic">
+              Non-Resident of Canada
+            </div>
+              <div id="select" class="select_yesno">
+                <div>
+                    <input  type="radio" name="canada" checked onclick="getRadio();">
+                    Yes
+                </div>
+                <div>
+                  <input  type="radio" name="canada" onclick="getRadio();" >
+                  No
+                </div>
+            </div>
+            <div class='row_line'>
+              <div>
+                <h1>Apt # (optional)</h1>
+                <input placeholder='Apt # (optional)'/>
+              </div>
+              <div>
+                <h1>Street #</h1>
+                <input placeholder='Street #'/>
+              </div>
+              <div>
+                <h1>Street Name</h1>
+                <input placeholder='Street Name'/>
+              </div>
+            </div>
+            <div class='row_line'>
+              <div>
+                <h1>City</h1>
+                <input placeholder='City here'/>
+              </div>
+              <div>
+                <h1>Province/Territory/Area</h1>
+                <select>
+                  <option>British Columbia</option>
+                </select>
+              </div>
+              <div>
+                <h1>Country</h1>
+                <input placeholder='Country here'/>
+              </div>
+              <div>
+                <h1>Postal Code</h1>
+                <input placeholder='Postal code here'/>
+              </div>
+            </div>
+            <div class='row_line'>
+              <div>
+                <h1>Phone 1 (optional)</h1>
+                <input type="number" placeholder='xxx'/>
+              </div>
+              <div>
+                <h1>Phone 2 (optional)</h1>
+                <input type="number" placeholder='xxx'/>
+              </div>
+              <div>
+                <h1>Phone 3 (optional)</h1>
+                <input type="number" placeholder='xxx'/>
+              </div>
+            </div>
+            <div class='row_line'>
+              <div>
+                <h1>Email 1 (optional)</h1>
+                <input placeholder='xxx'/>
+              </div>
+              <div>
+                <h1>Email 2 (optional)</h1>
+                <input placeholder='xxx'/>
+              </div>
+              <div>
+                <h1>Email 3 (optional)</h1>
+                <input placeholder='xxx'/>
+              </div>
+            </div>
+            <div class="bottom_submit" style="justify-content: flex-start;margin: 0;">
+              <div class="cancel">Cancel</div>
+              <div class="next">Submit</div>
+            </div>
+          </div>
+        </div>
       <div>
 
+    </div>
     </div>
   </div>
       
@@ -305,6 +443,7 @@ onload = function(){
     }
 }
 </script>
+<!-- 插入银行的div选项 -->
 <script type="text/javascript">
   var bank_img = new Array('td','rbc','bmo','scotia','cibc','hsbc','vancity','coast','national','cwb');
   var a = document.getElementById('banks');
@@ -323,5 +462,127 @@ onload = function(){
     }
   }
 </script>
+<!-- 添加弹窗 -->
+<script type="text/javascript">
+  window.onload=function () {
+   //获取弹窗按钮
+   var add_new=document.getElementById("add_new");
+   // var close=document.getElementsByClassName("close")[0];
+   var my_modal=document.getElementById("my_modal");
+   var modal_out = document.getElementById("modal_out");
+   
+   //按钮绑定事件
+   add_new.onclick=function () {
+     //获取弹窗
+     my_modal.style.display="flex";
+     modal_out.style.display="flex";
+     //点击了add之后，默认选择personal，选择后会改变其背景颜色
+     var a = document.getElementsByName('per_cor');
+    var target = document.getElementsByClassName('select_1');
+    a[0].checked = true;
+    target[0].style.backgroundColor = "#EEF5FF";
+    for( var i=0;i<a.length;i++){
+      a[i].onclick = (function(obj,i){
+        return function(){
+          for(var j=0;j<target.length;j++){
+              if(j==i){
+                  continue;
+              }
+              else{
+                target[j].style.backgroundColor = "#FFFFFF";
+              }
+          }
+          target[i].style.backgroundColor = "#EEF5FF";;
+        }
+      })(a[i],i);
+    }
+   }
+   close.onclick=function () {
+    my_modal.style.display="none";
+   }
+   //用户点击其他地方关闭弹窗
+   window.onclick=function (event) {
+     // if(event.target !=myModal && event.target != btn){
+     // myModal.style.display="none";
+     // modal_out.style.display="none";
+     // }
+     if(event.target == modal_out){
+      my_modal.style.display="none";
+     modal_out.style.display="none";
+     }
+     
+   }
+   }
+ </script>
+ <script type="text/javascript" src="./js/jquery-3.5.1.js"></script>
+ <script type="text/javascript" src="./dist/calendar.min.js"></script>
+ <!-- 日历的js -->
+ <script type="text/javascript">
+   var startTime= 0;
+   var endTime =0;
+   var eBegin = document.getElementById("begin-date"),
+     eEnd = document.getElementById("end-date");
+   var img = document.getElementById("calendar_img");
+   var beginCal = new PCalendar({
+     target:eBegin,
+     date:new Date(2000,0,1),
+     type:"hide",
+     format:format,
+     img:"./images/pc/pm/calendar.svg",
+     callback:function(date,format){
+       startTime = new Date(format);
+     }
+   });
+
+   var endCal = new PCalendar({
+     target:eEnd,
+     date:new Date(2017,0,6),
+     type:"hide",
+     format:format,
+     img:"./images/pc/pm/calendar.svg",
+     callback:function(date,format){
+       endTime = new Date(format);
+       if(startTime!= 0){
+         between = parseInt(parseInt(endTime-startTime)/1000/3600/24/30);
+         console.log(between)
+         if(between>1){
+           document.getElementById('TimeD').innerHTML=`Term: ${between} Months`
+         }
+       else{
+           document.getElementById('TimeD').innerHTML=`Term: ${between} Month`
+         }
+       }
+     }
+   });
+
+   function format(date){//MM/DD/YYYY
+     var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
+     var day = date.getDate()<10?"0"+date.getDate():date.getDate();
+     return month+"/"+day+"/"+date.getFullYear();
+   }
+ </script>
+ <!-- 选择相应的选项之后背景颜色变化 -->
+  <script type="text/javascript">
+ //点击了add之后，默认选择personal，选择后会改变其背景颜色
+    var a = document.getElementsByName('per_cor');
+    var target = document.getElementsByClassName('select_1');
+    a[0].checked = true;
+    target[0].style.backgroundColor = "#EEF5FF";
+    for( var i=0;i<a.length;i++){
+      a[i].onclick = (function(obj,i){
+        return function(){
+          for(var j=0;j<target.length;j++){
+              if(j==i){
+                  continue;
+              }
+              else{
+                target[j].style.backgroundColor = "#FFFFFF";
+              }
+          }
+          target[i].style.backgroundColor = "#EEF5FF";;
+        }
+      })(a[i],i);
+    }
+  </script>
   </body>
 </html>

@@ -41,17 +41,20 @@ li {
     width: 150px;
     padding: 0;
     outline: none;
+	border: none !important;
     background: #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 3px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 20px;
-    height: 20px;
     color: #C4C4C4;
     border: 0;
     margin-right: 10px;
+	display: flex;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start;
+    height: 30px !important;
+	flex: 1;
 }
 .calendar-btn input::-webkit-input-placeholder{
     font-style: normal;

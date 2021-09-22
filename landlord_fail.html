@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="./row_line.css" />
     <link rel="stylesheet" href="./modal.css" />
 
+    <link rel="stylesheet" href="./layui/css/layui.css" />
+    <script src="./layui/layui.js"></script>
     <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
   </head>
   <body>
@@ -71,7 +73,40 @@
             </p>
             <p>PM ID: PM12345</p>
           </div>
-          
+          <div class="black_background" id="modal_out" style="display: flex;">
+            <div class="my_modal" id="my_modal" style="display: flex;width: 1115px;max-height: 700px;">
+              <div class="head_blue">
+                Add Landlord(s)
+              </div>
+              <div class="search_landlord_main">
+                  <div class="error">
+                    <h1 class="small_title" style="margin-bottom: 5px;">Search for Landlord(s)</h1>
+                    <div class="not_found">Search results not found. <p>Add new landlord</p></div>
+                    <div class="row_line">
+                        <div>
+                            <h1>Landlord Name</h1>
+                            <input placeholder="John Doe" />
+                        </div>
+                        <div>
+                            <h1>Landlord ID#</h1>
+                            <input placeholder="LL123456" />
+                        </div>
+                        <div>
+                            <h1>ID# (Passport/Driver’s License/Identity Card)</h1>
+                            <input placeholder="John Doe" />
+                        </div>
+                    </div>
+                    <h1 class="small_title">OR</h1>
+                    <div class="row_line">
+                        <div>
+                            <h1>Company Name</h1>
+                            <input placeholder="Company name here" />
+                        </div>
+                    </div>
+                </div>
+                <div class="search_btn">Search</div>                   
+              </div>
+        </div>
           <div class="bottom_submit">
             <div class="cancel">Cancel</div>
             <div class="next">Next</div>
@@ -85,5 +120,6 @@
 </div>
 
 </div>
+
   </body>
 </html>
