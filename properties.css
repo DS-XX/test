@@ -259,8 +259,13 @@
     align-items: flex-start !important;
     justify-content: center;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
     font-family: Noto Sans TC;
+}
+
+.navigation_info span{
+    font-weight: bold;
+    margin-right: 3px;
 }
 .navigation_info h1{
     font-size: 18px;
@@ -277,6 +282,7 @@
     color: #2262C6;
     margin-top: 0;
     margin-bottom: 5px;
+    font-weight: 500;
 }
 .navigation_info p{
     font-size: 16px;

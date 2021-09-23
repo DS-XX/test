@@ -84,19 +84,12 @@
                     Add New
                 </div>
               </div>
-              <div class="properties_card" style="border-radius: 0 3px 3px 3px;">
+              <!-- 这个是ACCOUNTS RECEIVABLE -->
+              <div class="properties_card" name="change" style="border-radius: 0 3px 3px 3px;">
             <div class="top_content">
                 <div class="left_filter">
                     Filter by:
-                    <select><option>New Westminster</option></select>
-                    <select><option>ACTIVE</option></select>
-                </div>
-                <div class="right_search">
-                    Search:
-                    <input />
-                    <input />
-                    <input />
-                    <span>Search</span>
+                    <select><option>PENDING</option></select>
                 </div>
             </div>
             <table>
@@ -150,14 +143,25 @@
                 <span>Last</span>
             </div>
             
-        </div>
+             </div>
+              <!-- 这个是STATUS HISTORY -->
+              <div class="history" name="change" style="display: none;">
+                <h1>Status history</h1>    
+                <div class="row">
+                  <li>09/01/2021 9:35AM</li>
+                  <li><span>PM12345AR1234: </span> Payment Method</li>
+                  <li>Cheque → PAD</li>
+                  <li><img src="./images/pc/pm/head_pic.png"/>Jay Kirkland</li>
+                </div>
+                
+              </div>
           </div>
           <div class="bottom_submit">
             <div class="cancel">Previous</div>
             <div class="next">Next</div>
           </div>
         </div>
-        <div class="black_background" id="modal_out" style="display: flex;">
+        <div class="black_background" id="modal_out" style="display: none;">
             <div class="my_modal" id="my_modal" style="display: flex;width: 650px;max-height: 700px;">
               <div class="head_blue">
                 Add Landlord(s)
@@ -216,18 +220,49 @@
         </div>
 
 </div>
+<script type="text/javascript" src="./js/jquery-3.5.1/jquery-3.5.1.js"></script>
+<!-- 选项切换 -->
+<script type="text/javascript">
+    var change = document.getElementsByName('change');
+    var background = document.getElementsByClassName('left')[0].children;
+    window.onload=function () {
+      for(let i of background){
+        i.onclick=function(){
+          i.className='select';
+          var index = 0;
+          for(let x of background){
+            if(x == i){
+              change[index].style.display = 'flex';
+              for(let y of change){
+                if(change[index] == y)
+                continue;
+                y.style.display = 'none';
+              }
+              continue;
+            }
+            index++;
+            x.className='';
+          }
+        }
+      }
+    }
+</script>
+<!-- 表格填写 -->
 <script type="text/javascript">
     const name = new Array('ID','PAY TO', 'DUE DATE' ,'TYPE','PAYMENT METHOD' ,'AMOUNT','RECEIPT','STATUS');    console.log(typeof(name));
     for(var i=0;i<name.length;i++){
         if(name[i]=='AMOUNT'){
             document.getElementById('t_head').innerHTML+=`<th id='amount'>${name[i]}</th>`;
         }
-        document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+        else{
+          document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+
+        }
         // else{
         //     document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
         // }
     }
-    </script>
+</script>
      <script type="text/javascript" src="./dist/calendar.min.js"></script>
      <!-- 日历的js -->
      <script type="text/javascript">

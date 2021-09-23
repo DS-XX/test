@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./properties.css" />
+    <link rel="stylesheet" href="./row_line.css" />
+    <link rel="stylesheet" href="./modal.css" />
+    <link rel="stylesheet" href="./account.css" />
+    <link rel="stylesheet" href="./table.css" />
+
+    <link rel="stylesheet" type="text/css" href="./dist/calendar.min.css">
+  </head>
+  <body>
+      <div class="navigation">
+        <!-- 白色地的顶部 查找 -->
+        <div class="pm_head_white">
+          <img
+            src='./images/pc/pm/head1.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head2.svg'
+            alt=''
+          />
+          <img
+            src='./images/pc/pm/head3.svg'
+            alt=''
+            />
+          <div class="search">
+            <input placeholder="Search" />
+            <img src='./images/pc/pm/head_search.svg' />
+          </div>
+        </div>
+        <div class="contain_main">
+          <!-- 导航 箭头 -->
+          <div class="chooseItem">
+            <a>Properties</a>
+            <img
+            src='./images/pc/pm/bread-arrow.svg'
+            alt=''
+            />
+            <a class="select">Property</a>
+          </div>
+          <!-- 导航栏 白色 选中蓝色 -->
+          <ul class="navigation_white">
+          <li class="select">Property</li>
+          <li>Landlord</li>
+          <li>Tenant</li>
+          <li>Accounts Receivable</li>
+          <li>Management</li>
+          <li>Non-Resident Tax</li>
+          <li>Accounts Payable</li>
+          <li>Pay to Landlord</li>
+          <li>Files</li>
+          <li>Summary</li>
+          </ul>
+          <!-- PROPERTY INFO -->
+          <div class="navigation_info">
+            <h1>PROPERTY INFO</h1>
+            <h2><span>ADDress:</span>57355 NO.3a</h2>
+            <p><span>Description: </span> Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
+            <p>
+              <span>Ref ID:</span> R008-2021-07-0002
+            </p>
+            <div class="row_between" style="margin-bottom: 10px;">
+                <p><span>PM ID:</span> PM12345</p>
+                <p><span>Total Monthly Income:</span><span style="color:#00ADAD;"> $2,000</span></p>
+            </div>
+          </div>
+          <div class="management">
+            <div class="top_select_add">
+              <div class="left">
+                <div class="select">MANAGEMENT FEE SETUP</div>
+                <div>MANAGEMENT FEE DISTRIBUTION</div>
+                <div>MANAGEMENT FEE</div>
+                <div>OFFICE  SERVICES FEE</div>
+                <div>STATUS HISTORY</div>
+              </div>
+            </div>
+            <!-- 这个是MANAGEMENT fee SETUP -->
+            <div class="management_fee_setup" name="change" style="border-radius: 0 3px 3px 3px;">
+                <h1 class="card_title">MANAGEMENT fee SETUP</h1>
+                <div class="row_between" style="margin-bottom: 20px;">
+                    <div class="row_center_start">
+                        <div class="row_center_start blue_border select_blue_back" style="height: 80px;padding: 20px;">
+                            <input type="radio" name="option" style="width: 20px;height: 20px;"/>
+                            <input type="number" class="input row_center_start">
+                            <p>% of Total Monthly Income</p>
+                        </div>
+                        <span style="margin: 0 20px;font-weight: bold;">OR</span>
+                        <div class="row_center_start blue_border" style="height: 80px;padding: 20px;">
+                            <input type="radio" name="option" style="width: 20px;height: 20px;"/>
+                            <input type="number" class="input row_center_start">
+                        </div>
+                    </div>
+                    <span>$120</span>
+                </div>
+                <div class="row_between" style="margin-bottom: 5px;">
+                    <span style="font-weight: bold;color:#2262C6;">GST:</span>
+                    <span>$0</span>
+                </div>
+                <div class="row_between">
+                    <span style="font-weight: bold;color:#2262C6;">Total:</span>
+                    <span style="color:#00ADAD;">$120</span>
+                </div>
+           </div>
+            <!-- 这个是MANAGEMENT FEE DISTRIBUTION -->
+            <div class="management_fee_distribution card_white" name="change" style="display: none;">
+              <div class="row_between margin_bottom_20">
+                <h1 class="card_title" style="margin: 0;">MANAGEMENT FEE distribution</h1>   
+                <div style="flex-direction: row;">
+                    <span class="top_button" style="background-color: #2262C6;margin-right:10px;" id="distribute_edit">Edit</span>
+                    <span id='distribute_add' class="top_button" style="background-color: #00ADAD;">Add New</span>
+                </div>
+              </div>
+              <table>
+                <thead>
+                    <tr id='t_head'>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th><img src="./images/pc/pm/head_pic.png" /></th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th>PM12345</th>
+                        <th name='set_input'>90</th>
+                        <th><img src="./images/pc/pm/delete.svg" /></th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bottom">
+                <p class="Viewing">Viewing 6 out of 100</p>
+                <div class="bottom_total">
+                    Total:
+                    <div>
+                        <span>$1,000,000</span>
+                    </div>
+                </div>
+            </div>
+             <!-- distribute_add弹窗 -->
+            <div class="black_background" id="distribute_modal_out" style="display: flex;display: none;" >
+                <div class="my_modal" id="distribute_my_modal" style="display: flex;width: 650px;height: auto;">
+                <div class="head_blue">
+                    Add New Agent for Management Fee Distribution
+                </div>
+                <div class="add_management_distribution">
+                    <h1 style="margin-bottom: 20px;">Search for Agent(s)</h1>  
+                    <div class="row_end_start" style="margin-bottom: 20px;">
+                        <div class="column_start">
+                            <p>V #</p>
+                            <input class="input" placeholder="V # here"/>
+                        </div>
+                        <span class="blue_bold" style="margin: 0 20px;width: auto;">OR</span>
+                        <div class="column_start">
+                            <p>Name</p>
+                            <input class="input" style="width: 250px;" placeholder="V # here"/>
+                        </div>
+                    </div>
+                    <span class="top_button" style="height:43px;background-color:#2262C6;">Search</span>
+                    <h1 style="font-size: 20px;">Search RESULTS</h1>  
+                    <p>5 out of 5 found. </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- 空位置 -->
+                                <th style="width: 45px;margin: 0;"></th>
+                                <th>PROFILE IMAGE</th>
+                                <th>V NUMBER</th>
+                                <th>NAME</th>
+                                <th>OFFICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height: 60px;position: relative;border-top-width: 0;">
+                                <th style="width:45px;margin: 0;"><input type="radio" name='option' class="radio" style="position: absolute;left:25px;"/></th>
+                                <th><img src="./images/pc/pm/head_pic.png" /></th>
+                                <th>V2345678910</th>
+                                <th>John Doe</th>
+                                <th>CREST</th>
+                            </tr>
+                            <tr style="height: 60px;position: relative;border-top-width: 0;">
+                                <th style="width:45px;margin: 0;"><input type="radio" name='option' class="radio" style="position: absolute;left:25px;"/></th>
+                                <th><img src="./images/pc/pm/head_pic.png" /></th>
+                                <th>V2345678910</th>
+                                <th>John Doe</th>
+                                <th>CREST</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom_submit margin_top_40 row_center_start">
+                        <div class="cancel">Cancel</div>
+                        <div class="next">Select</div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            </div>
+            <!-- 这个是MANAGEMENT FEE -->
+            <div class="management_fee card_white" name="change" style="display: none;">
+                <h1 class="card_title">MANAGEMENT fee SETUP</h1>
+                <div class="properties_card" style="border:none;box-shadow: none;">
+                    <div class="top_content">
+                        <div class="left_filter">
+                            Filter by:
+                            <select><option>PENDING</option></select>
+                        </div>
+                        <span class="top_button" style="background-color:#00ADAD;" id='fee_add'>Add New</span>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr id='t_head'>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th><div class="status">
+                                    <img src="./images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                                    PENDING
+                                    <img id='fee_edit' src="./images/pc/pm/pencil.svg" 
+                                    style="width: 16px;height: 16px;margin-left: 10px;"/>
+                                </div></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <p class="Viewing">Viewing 6 out of 100</p>
+                        <div class="bottom_total">
+                            Total:
+                            <div>
+                                <span>$1,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom_page">
+                        <span>First</span>
+                        <div class="middle">
+                            <span>
+                                <img src='./images/pc/pm/page_left.svg' />
+                            </span>
+                            <div id='page'>
+                                <span></span>
+                                <span></span>
+                                <span>...</span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>
+                                <img src='./images/pc/pm/page_right.svg' />
+                            </span>
+                        </div>
+                        <span>Last</span>
+                    </div>
+                     -->
+                </div>
+                <!-- 这个事fee的edit弹窗 -->
+                <div class="black_background" id="fee_edit_modal_out" style="display: flex;display: none;" >
+                    <div class="my_modal" id="fee_edit_my_modal" style="display: flex;width: 650px;height: auto;">
+                    <div class="head_blue">
+                        Edit Management Fee
+                    </div>
+                    <div class="edit_management_fee card_white">
+                        <div class="row head_pic">
+                            <img class="pic" src="./images/pc/pm/head_pic.png" />
+                            <div class="column">
+                                <h1>Agent Name</h1>
+                                <p>John Doe</p>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h1>ID</h1>
+                            <p>PM12345MF1234</p>
+                        </div>
+                        <div class="column">
+                            <h1>V#</h1>
+                            <p>V1234567819</p>
+                        </div>
+                        <div class="column">
+                            <h1>Company Name</h1>
+                            <p>Remax Crest Realty</p>
+                        </div>
+                        <div class="column">
+                            <h1>Office</h1>
+                            <p>CREST</p>
+                        </div>
+                        <div class="column">
+                            <h1>Type</h1>
+                            <select class="select" style="width:300px">
+                                <option>Management fee</option>
+                            </select>
+                        </div>
+                        <div class="column">
+                            <h1>Status</h1>
+                            <select class="select" style="width:300px">
+                                <option>Pending</option>
+                            </select>
+                        </div>
+                        <div class="column">
+                            <h1>Type</h1>
+                            <input placeholder="$1,234" class="input" type="number" style="width: 300px;"/>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="column" style="">
+                            <h1>Type</h1>
+                            <div name="begin-date" style="width: 300px;"></div>
+                        </div>
+                        <div class="row">
+                            <h1>Management Fee:</h1>
+                            <p>$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>Total:</h1>
+                            <p style="font-weight:bold;color:#00ADAD;">$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>Office Service Fee:</h1>
+                            <p>$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>Total:</h1>
+                            <p style="font-weight:bold;color:#00ADAD;">$10</p>
+                        </div>
+                        <div class="bottom_submit" style="justify-content: flex-start;">
+                            <div class="cancel">Cancel</div>
+                            <div class="next" id='fee_save'>Save</div>
+                          </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- 这个事fee的add弹窗 -->
+                <div class="black_background" id="fee_add_modal_out" style="display: flex;display: none;" >
+                    <div class="my_modal" id="fee_add_my_modal" style="display: flex;width: 650px;height: auto;">
+                    <div class="head_blue">
+                        Edit Management Fee
+                    </div>
+                    <div class="edit_management_fee card_white">
+                        <div class="row head_pic">
+                            <img class="pic" src="./images/pc/pm/head_pic.png" />
+                            <div class="column">
+                                <h1>Agent Name</h1>
+                                <p>John Doe</p>
+                            </div>
+                        </div>
+                       
+                        <div class="column">
+                            <h1>V#</h1>
+                            <p>V1234567819</p>
+                        </div>
+                        <div class="column">
+                            <h1>Company Name</h1>
+                            <p>Remax Crest Realty</p>
+                        </div>
+                        <div class="column">
+                            <h1>Office</h1>
+                            <p>CREST</p>
+                        </div>
+                        <div class="column">
+                            <h1>Type</h1>
+                            <p>Management Fee</p>
+                        </div>
+                        <div class="column">
+                            <h1>Status</h1>
+                            <p>Pending</p>
+                        </div>
+                        <div class="column">
+                            <h1>Amount</h1>
+                            <input placeholder="$1,234" class="input" type="number" style="width: 300px;"/>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="column" style="">
+                            <h1>Type</h1>
+                            <div name="begin-date" style="width: 300px;"></div>
+                        </div>
+                        <div class="row">
+                            <h1>Management Fee:</h1>
+                            <p>$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>Total:</h1>
+                            <p style="font-weight:bold;color:#00ADAD;">$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>Office Service Fee:</h1>
+                            <p>$10</p>
+                        </div>
+                        <div class="row">
+                            <h1>GST:</h1>
+                            <p>$0</p>
+                        </div>
+                        <div class="row" style="margin-bottom: 20px;">
+                            <h1>Total:</h1>
+                            <p style="font-weight:bold;color:#00ADAD;">$10</p>
+                        </div>
+                        <div class="bottom_submit" style="justify-content: flex-start;">
+                            <div class="cancel">Cancel</div>
+                            <div class="next" id='fee_save'>Save</div>
+                          </div>
+                    </div>
+                    </div>
+                </div>
+           
+            </div>
+            <!-- 这个是OFFICE SERVICES FEE -->
+            <div class="management_services card_white" name="change" style="display: none;">
+                <h1 class="card_title">OFFICE SERVICES fee</h1>
+                <div class="properties_card" style="border:none;box-shadow: none;">
+                    <div class="top_content">
+                        <div class="left_filter">
+                            Filter by:
+                            <select><option>PENDING</option></select>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>FROM (PM TRUST)</th>
+                                <th>TO (COMM ISSION TRUST)</th>
+                                <th>TYPE</th>
+                                <th>DUE DATE</th>
+                                <th>AMOUNT</th>
+                                <th>GST</th>
+                                <th>TOTAL AMOUNT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th><div class="status">
+                                    <img src="./images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                                    PENDING
+                                </div></th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <p class="Viewing">Viewing 6 out of 100</p>
+                        <div class="bottom_total">
+                            Total:
+                            <div>
+                                <span>$1,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="bottom_page">
+                        <span>First</span>
+                        <div class="middle">
+                            <span>
+                                <img src='./images/pc/pm/page_left.svg' />
+                            </span>
+                            <div id='page'>
+                                <span></span>
+                                <span></span>
+                                <span>...</span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>
+                                <img src='./images/pc/pm/page_right.svg' />
+                            </span>
+                        </div>
+                        <span>Last</span>
+                    </div>
+                     -->
+                </div>
+            </div>
+            <!-- 这个是STATUS HISTORY -->
+            <div class="management_services card_white" name="change" style="display: none;">
+                <h1 class="card_title">OFFICE SERVICES fee</h1>
+                <!-- 这个是STATUS HISTORY -->
+                <div class="history">
+                    <h1>Status history</h1>    
+                    <div class="row">
+                    <li>09/01/2021 9:35AM</li>
+                    <li><span>PM12345AR1234: </span> Payment Method</li>
+                    <li>Cheque → PAD</li>
+                    <li><img src="./images/pc/pm/head_pic.png"/>Jay Kirkland</li>
+                </div>
+                
+              </div>
+            </div>
+        </div>
+          <div class="bottom_submit margin_top_40">
+            <div class="cancel">Previous</div>
+            <div class="next" id='distribute_next'>Next</div>
+          </div>
+        </div>
+      <div>
+
+    </div>
+  </div>
+      
+</div>
+
+</div>
+
+<div>
+
+</div>
+<!-- 表格填写 -->
+<script type="text/javascript">
+    const name = new Array('PROFILE IMAGE','V #', 'NAME' ,'OFFICE','PERCENTAGE' ,'REMOVE');    
+    console.log(typeof(name));
+    for(var i=0;i<name.length;i++){
+        if(name[i]=='AMOUNT'){
+            document.getElementById('t_head').innerHTML+=`<th id='amount'>${name[i]}</th>`;
+        }
+        else{
+          document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+
+        }
+        // else{
+        //     document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
+        // }
+    }
+</script>
+<!-- 选项切换 编辑保存-->
+<script type="text/javascript" src='./js/切换选项的js.js'></script>
+
+<script type="text/javascript">
+      window.onload=function () {
+        distribute_add();
+        change_edit();
+       //获取弹窗按钮 fee_edit_modal
+     var renew=document.getElementById("fee_edit");
+     var renew_modal=document.getElementById("fee_edit_my_modal");
+     var modal_out = document.getElementById("fee_edit_modal_out");
+     //按钮绑定事件
+     renew.onclick=function () {
+       //获取弹窗
+       renew_modal.style.display="flex";
+       modal_out.style.display="flex";
+       autoCenter(renew_modal);
+       document.documentElement.style.overflow="hidden";
+     }
+     //用户点击其他地方关闭弹窗
+     window.onclick=function (event) {
+       if(event.target == modal_out){
+         if(renew_modal){
+          renew_modal.style.display="none";
+         }
+        modal_out.style.display="none";
+        document.documentElement.style.overflow="auto";
+       }
+     }
+    window.onresize = function(){
+          autoCenter(renew_modal);
+      };
+    //获取弹窗按钮 fee_add_modal
+    var renew=document.getElementById("fee_add");
+     var renew_modal=document.getElementById("fee_add_my_modal");
+     var modal_out = document.getElementById("fee_add_modal_out");
+     //按钮绑定事件
+     renew.onclick=function () {
+       //获取弹窗
+       renew_modal.style.display="flex";
+       modal_out.style.display="flex";
+       autoCenter(renew_modal);
+       document.documentElement.style.overflow="hidden";
+     }
+     //用户点击其他地方关闭弹窗
+     window.onclick=function (event) {
+       if(event.target == modal_out){
+         if(renew_modal){
+          renew_modal.style.display="none";
+         }
+        modal_out.style.display="none";
+        document.documentElement.style.overflow="auto";
+       }
+     }
+    window.onresize = function(){
+          autoCenter(renew_modal);
+      };
+    }
+</script>
+<!-- 弹窗按钮 distribute_add -->
+<script type="text/javascript">
+    //获取弹窗按钮 distribute_add
+    function distribute_add(){
+    var renew=document.getElementById("distribute_add");
+     var renew_modal=document.getElementById("distribute_my_modal");
+     var modal_out = document.getElementById("distribute_modal_out");
+     //按钮绑定事件
+     renew.onclick=function () {
+       //获取弹窗
+       renew_modal.style.display="flex";
+       modal_out.style.display="flex";
+       autoCenter(renew_modal);
+       document.documentElement.style.overflow="hidden";
+     }
+     //用户点击其他地方关闭弹窗
+     window.onclick=function (event) {
+       if(event.target != modal_out){
+         if(renew_modal){
+            renew_modal.style.display="none";
+         }
+         document.documentElement.style.overflow="auto";
+         modal_out.style.display="none";
+       }
+     }
+    window.onresize = function(){
+          autoCenter(renew_modal);
+      };
+    }
+    function autoCenter(el){
+        //获取可见窗口大小
+        var bodyW = document.documentElement.clientWidth;
+        var bodyH = document.documentElement.clientHeight;
+        //获取对话框宽、高
+        var elW = el.offsetWidth;
+        var elH = el.offsetHeight;
+
+        el.style.left = (bodyW - elW)/2 + 'px';
+        // el.style.top = (bodyH - elH)/2 + 'px';
+      }
+</script>
+<script type="text/javascript" src="./dist/calendar.min.js"></script>
+<!-- 日历的js -->
+<script type="text/javascript">
+  var startTime= 0;
+  var endTime =0;
+  var eBegin = document.getElementsByName("begin-date");
+  var img = document.getElementById("calendar_img");
+  for(x of eBegin){
+      console.log(x,'这个是x');
+    var beginCal = new PCalendar({
+    target:x,
+    date:new Date(2000,0,1),
+    type:"hide",
+    format:format,
+    img:"./images/pc/pm/calendar.svg",
+    callback:function(date,format){
+      startTime = new Date(format);
+    }
+  });
+  }
+  
+  function format(date){//MM/DD/YYYY
+    var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
+    var day = date.getDate()<10?"0"+date.getDate():date.getDate();
+    return month+"/"+day+"/"+date.getFullYear();
+  }
+</script>
+  </body>
+</html>

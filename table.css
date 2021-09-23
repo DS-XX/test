@@ -1,5 +1,6 @@
  table{
     width: 100%;
+    border-collapse: collapse
 }
  table thead{
     display: flex;
@@ -22,6 +23,8 @@
     box-sizing: border-box;
 }
  table thead tr th{
+    display: flex;
+    justify-content: center;
     margin: auto;
     font-style: normal;
     font-weight: bold;
@@ -50,6 +53,10 @@
     box-sizing: border-box;
 }
  table tbody tr th{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     font-style: normal;
     font-weight: bold;
