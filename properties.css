@@ -5,13 +5,28 @@
     align-items: flex-start;
     width: 100%;
 }   
+select{
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C4C4C4;
+    outline: none;
+}
+select option{
+    height: 100px;
+}
 .navigation .black .my_modal{
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     width: 1115px;
-    height: 1070px;
+    height: 900px;
     position: fixed;
     margin:auto;
     background-color: #FFFFFF;
@@ -20,8 +35,8 @@
     top: 24px;
     left: 100px;
     box-sizing: border-box;
+    overflow: scroll;
 }
-
 .black .my_modal .head_blue{
     padding: 17px 20px;
     box-sizing: border-box;
@@ -364,16 +379,8 @@
     color: #C4C4C4;
 }
 .property_input .left .row_line div select {
-    outline: none;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
-    color: #C4C4C4;
     height: 40px;
     padding: 10px;
 }
@@ -1030,15 +1037,6 @@
 }
 .landlord_card .banking .cheque select{
     margin: 10px 0;
-    background: #FFFFFF;
-    border: 1px solid #C4C4C4;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    color: #C4C4C4;
     height: 40px;
     width: 318px;
 }
@@ -1147,16 +1145,6 @@
     color: #C4C4C4;
 }
 .landlord_card .banking .row_line div select {
-    outline: none;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    box-sizing: border-box;
-    border-radius: 3px;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
-    color: #C4C4C4;
     height: 40px;
     padding: 10px;
 }

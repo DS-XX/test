@@ -453,9 +453,9 @@
                                 <th>TO (COMM ISSION TRUST)</th>
                                 <th>TYPE</th>
                                 <th>DUE DATE</th>
-                                <th>AMOUNT</th>
-                                <th>GST</th>
-                                <th>TOTAL AMOUNT</th>
+                                <th name='accounts'>AMOUNT</th>
+                                <th name='accounts'>GST</th>
+                                <th name='accounts'>TOTAL AMOUNT</th>
                                 <th>STATUS</th>
                             </tr>
                         </thead>
@@ -480,8 +480,7 @@
                         <p class="Viewing">Viewing 6 out of 100</p>
                         <div class="bottom_total">
                             Total:
-                            <div>
-                                <span>$1,000,000</span>
+                            <div id='total'>
                             </div>
                         </div>
                     </div>
@@ -559,130 +558,42 @@
 </script>
 <!-- 选项切换 编辑保存-->
 <script type="text/javascript" src='./js/切换选项的js.js'></script>
-
-<script type="text/javascript">
+<script type="text/javascript" src='./js/弹窗的js.js'></script>
+<script type="text/javascript" src='./js/jquery-3.5.1.js'></script>
+<!-- onload -->
+<script type="text/javascript"> 
       window.onload=function () {
-        distribute_add();
         change_edit();
-       //获取弹窗按钮 fee_edit_modal
-     var renew=document.getElementById("fee_edit");
-     var renew_modal=document.getElementById("fee_edit_my_modal");
-     var modal_out = document.getElementById("fee_edit_modal_out");
-     //按钮绑定事件
-     renew.onclick=function () {
-       //获取弹窗
-       renew_modal.style.display="flex";
-       modal_out.style.display="flex";
-       autoCenter(renew_modal);
-       document.documentElement.style.overflow="hidden";
-     }
-     //用户点击其他地方关闭弹窗
-     window.onclick=function (event) {
-       if(event.target == modal_out){
-         if(renew_modal){
-          renew_modal.style.display="none";
-         }
-        modal_out.style.display="none";
-        document.documentElement.style.overflow="auto";
-       }
-     }
-    window.onresize = function(){
-          autoCenter(renew_modal);
-      };
-    //获取弹窗按钮 fee_add_modal
-    var renew=document.getElementById("fee_add");
-     var renew_modal=document.getElementById("fee_add_my_modal");
-     var modal_out = document.getElementById("fee_add_modal_out");
-     //按钮绑定事件
-     renew.onclick=function () {
-       //获取弹窗
-       renew_modal.style.display="flex";
-       modal_out.style.display="flex";
-       autoCenter(renew_modal);
-       document.documentElement.style.overflow="hidden";
-     }
-     //用户点击其他地方关闭弹窗
-     window.onclick=function (event) {
-       if(event.target == modal_out){
-         if(renew_modal){
-          renew_modal.style.display="none";
-         }
-        modal_out.style.display="none";
-        document.documentElement.style.overflow="auto";
-       }
-     }
-    window.onresize = function(){
-          autoCenter(renew_modal);
-      };
+        document.getElementById('fee_edit').onclick=function(){
+            modal('fee_edit','fee_edit_my_modal','fee_edit_modal_out');
+        }
+        document.getElementById('fee_add').onclick=function(){
+            modal('fee_add','fee_add_my_modal','fee_add_modal_out');
+        }
+        document.getElementById('distribute_add').onclick=function(){
+            modal('distribute_add','distribute_my_modal','distribute_modal_out');
+        }
+        // 更改edit
+        var next = document.getElementById('distribute_next');
+        var set_input = document.getElementsByName('set_input');
+        document.getElementById('distribute_edit').onclick=function(){
+            for(x of set_input){
+                x.innerHTML = `<input value=${x.innerText} />`;
+            }
+            next.innerText='Save';
+        }
+        next.onclick=function(){
+            if(next.innerText=='Save'){
+                next.innerText='Next';
+                for(x of set_input){
+                    x.innerHTML = x.getElementsByTagName('input')[0].value;
+            }
+            }
+        }
     }
-</script>
-<!-- 弹窗按钮 distribute_add -->
-<script type="text/javascript">
-    //获取弹窗按钮 distribute_add
-    function distribute_add(){
-    var renew=document.getElementById("distribute_add");
-     var renew_modal=document.getElementById("distribute_my_modal");
-     var modal_out = document.getElementById("distribute_modal_out");
-     //按钮绑定事件
-     renew.onclick=function () {
-       //获取弹窗
-       renew_modal.style.display="flex";
-       modal_out.style.display="flex";
-       autoCenter(renew_modal);
-       document.documentElement.style.overflow="hidden";
-     }
-     //用户点击其他地方关闭弹窗
-     window.onclick=function (event) {
-       if(event.target != modal_out){
-         if(renew_modal){
-            renew_modal.style.display="none";
-         }
-         document.documentElement.style.overflow="auto";
-         modal_out.style.display="none";
-       }
-     }
-    window.onresize = function(){
-          autoCenter(renew_modal);
-      };
-    }
-    function autoCenter(el){
-        //获取可见窗口大小
-        var bodyW = document.documentElement.clientWidth;
-        var bodyH = document.documentElement.clientHeight;
-        //获取对话框宽、高
-        var elW = el.offsetWidth;
-        var elH = el.offsetHeight;
-
-        el.style.left = (bodyW - elW)/2 + 'px';
-        // el.style.top = (bodyH - elH)/2 + 'px';
-      }
 </script>
 <script type="text/javascript" src="./dist/calendar.min.js"></script>
 <!-- 日历的js -->
-<script type="text/javascript">
-  var startTime= 0;
-  var endTime =0;
-  var eBegin = document.getElementsByName("begin-date");
-  var img = document.getElementById("calendar_img");
-  for(x of eBegin){
-      console.log(x,'这个是x');
-    var beginCal = new PCalendar({
-    target:x,
-    date:new Date(2000,0,1),
-    type:"hide",
-    format:format,
-    img:"./images/pc/pm/calendar.svg",
-    callback:function(date,format){
-      startTime = new Date(format);
-    }
-  });
-  }
-  
-  function format(date){//MM/DD/YYYY
-    var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
-    var day = date.getDate()<10?"0"+date.getDate():date.getDate();
-    return month+"/"+day+"/"+date.getFullYear();
-  }
-</script>
+<script type="text/javascript" src="./dist/日历的js.js"></script>
   </body>
 </html>

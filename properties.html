@@ -80,8 +80,8 @@
                         <th>PM12345</th>
                         <th>PM12345</th>
                         <th>PM12345</th>
-                        <th>PM12345</th>
-                        <th>PM12345</th>
+                        <th>1234</th>
+                        <th>12345</th>
                         <th>PM12345</th>
                     </tr>
                 </tbody>
@@ -126,6 +126,7 @@
 </div>
 
 </div>
+<!-- 插入表格 -->
 <script type="text/javascript">
 const name = new Array('PM ID','LANDLORD', 'PHOTO' ,'PROPERTY ADDRESS','CITY' ,'DECSC-RIPTION','MONTHS LEFT','MONTHLY INCOME','BALANCE IN TRUST' ,'STATUS');
 console.log(typeof(name));
@@ -136,6 +137,7 @@ for(var i=0;i<name.length;i++){
     else{
         document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
     }
+
 }
 </script>
 <!-- 点击后变背景颜色 -->

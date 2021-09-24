@@ -206,7 +206,7 @@
           </div>
         </div>
          <!-- 这个是renew -->
-        <div class="black_background">
+        <div class="black_background" id="renew_out">
           <div class="my_modal" id="renew_modal" style="width:650px">
             <div class="head_blue" style="background:#2262C6;color: #FFFFFF;">
               Renew Management Term
@@ -240,7 +240,7 @@
        </div>
 
         <!-- 这个是terminate -->
-        <div class="black_background">
+        <div class="black_background" id='terminate_out'>
           <div class="my_modal" id="terminate_modal" style="width:650px">
             <div class="head_blue" style="background: #FF5B60;">
               Terminate Management Term
@@ -273,128 +273,23 @@
   
   </script>
   <!-- 弹窗 -->
-  <script type="text/javascript">
-    window.onload=function () {
-      var choose;
-     //获取弹窗按钮
-     var renew=document.getElementById("renew");
-     var terminate=document.getElementById("terminate");
-     var edit=document.getElementById("edit");
-
-     // var close=document.getElementsByClassName("close")[0];
-     var renew_modal=document.getElementById("renew_modal");
-     var terminate_modal=document.getElementById("terminate_modal");
-     var edit_modal=document.getElementById("edit_modal");
-     var modal_out = document.getElementsByClassName("black_background");
-     //按钮绑定事件
-     renew.onclick=function () {
-       //获取弹窗
-       renew_modal.style.display="flex";
-       modal_out[0].style.display="flex";
-       autoCenter(renew_modal);
-       document.documentElement.style.overflow="hidden";
-      $('#public').load('modal_public.html');
-      choose = renew_modal;
-     }
-     terminate.onclick=function () {
-       //获取弹窗
-       terminate_modal.style.display="flex";
-       modal_out[1].style.display="flex";
-       choose = terminate_modal;
-     }
-    //  edit.onclick=function () {
-    //    //获取弹窗
-    //    renew_modal.style.display="flex";
-    //    modal_out.style.display="flex";
-    //  }
-     //用户点击其他地方关闭弹窗
-     window.onclick=function (event) {
-       var x=0;
-      for(var i=0; i<modal_out.length;i++){
-        if(modal_out[i].style.display && modal_out[i].style.display == 'flex'){
-          x=i;
-          break;
-        }
-      }
-       if(event.target == modal_out[x]){
-         if(renew_modal){
-          renew_modal.style.display="none";
-         }
-         if(terminate_modal){
-          terminate_modal.style.display="none";
-         }
-         if(edit_modal){
-          edit_modal.style.display="none";
-         }
-          modal_out[x].style.display="none";
-        document.documentElement.style.overflow="auto";
-       }
-       
-     }
-    //  跟随窗口的变换变换位置
-    window.onresize = function(){
-          autoCenter(choose);
-      };
-    
-     }
-    function autoCenter(el){  
-        //获取可见窗口大小
-        var bodyW = document.documentElement.clientWidth;
-        var bodyH = document.documentElement.clientHeight;
-        //获取对话框宽、高
-        var elW = el.offsetWidth;
-        var elH = el.offsetHeight;
-
-        el.style.left = (bodyW - elW)/2 + 'px';
-        // el.style.top = (bodyH - elH)/2 + 'px';
-      };
-   </script>
-    <script type="text/javascript" src="./dist/calendar.min.js"></script>
-    <!-- 日历的js -->
+  <script type="text/javascript" src="./js/弹窗的js.js"></script>
     <script type="text/javascript">
-      var startTime= 0;
-      var endTime =0;
-      var eBegin = document.getElementById("begin-date"),
-        eEnd = document.getElementById("end-date");
-      var img = document.getElementById("calendar_img");
-      var beginCal = new PCalendar({
-        target:eBegin,
-        date:new Date(2000,0,1),
-        type:"hide",
-        format:format,
-        img:"./images/pc/pm/calendar.svg",
-        callback:function(date,format){
-          startTime = new Date(format);
-        }
-      });
-   
-      var endCal = new PCalendar({
-        target:eEnd,
-        date:new Date(2017,0,6),
-        type:"hide",
-        format:format,
-        img:"./images/pc/pm/calendar.svg",
-        callback:function(date,format){
-          endTime = new Date(format);
-          if(startTime!= 0){
-            between = parseInt(parseInt(endTime-startTime)/1000/3600/24/30);
-            console.log(between)
-            if(between>1){
-              document.getElementById('TimeD').innerHTML=`Term: ${between} Months`
-            }
-          else{
-              document.getElementById('TimeD').innerHTML=`Term: ${between} Month`
-            }
-          }
-        }
-      });
-   
-      function format(date){//MM/DD/YYYY
-        var month = (date.getMonth()+1)<10?"0"+(date.getMonth()+1):getMonth()+1;
-        var day = date.getDate()<10?"0"+date.getDate():date.getDate();
-        return month+"/"+day+"/"+date.getFullYear();
-      }
-    </script>
+    window.onload=function(){
+      document.getElementById("renew").onclick=function(){
+      modal('renew','renew_modal','renew_out')
+    }
+    document.getElementById("terminate").onclick=function(){
+      modal('terminate','terminate_modal','terminate_out')
+    };
+    }
+    
+    //  document.getElementById("edit").onclick=function(){
+    //   modal('edit','edit_modal','black_background')
+    // };
+   </script>
+    <script type="text/javascript" src="./js/calendar.min.js"></script>
+    <script type="text/javascript" src="./js/日历的js.js"></script>
 </div>
 
 </div>
