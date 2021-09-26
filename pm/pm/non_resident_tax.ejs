@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/calender.min.css" />
+    <link rel="stylesheet" href="/pm/style/accounts.css" />
+    <link rel="stylesheet" href="/pm/style/table.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                     <!-- 这个是内容 -->
+                      <div>
+                        <div class="top_select_add">
+                            <div class="left">
+                                <div class="select">NON-RESIDENT TAX</div>
+                                <div>STATUS HISTORY</div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <!--  NON-RESIDENT TAX  -->
+                      <div class="management_services card_white" name="change" style="display: flex;">
+                        <div class="properties_card" style="border:none;box-shadow: none;">
+                            <div class="top_content">
+                                <div class="left_filter">
+                                    Filter by:
+                                    <select><option>PENDING</option></select>
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>LANDLORD ID</th>
+                                        <th>PAY TO</th>
+                                        <th>DUE DATE</th>
+                                        <th>TYPE</th>
+                                        <th name='accounts'>PAYMENT METHOD</th>
+                                        <th name='accounts'>AMOUNT</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th>PM12345</th>
+                                        <th style="width: auto;"><div class="status">
+                                            <img src="/images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                                            PENDING
+                                            <img id='' src="/images/pc/pm/pencil.svg" style="width: 16px;height: 16px;margin-left: 10px;"/>
+                                        </div></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="bottom">
+                                <p class="Viewing">Viewing 6 out of 100</p>
+                                <div class="bottom_total">
+                                    Total:
+                                    <div id='total'>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="bottom_page">
+                                <span>First</span>
+                                <div class="middle">
+                                    <span>
+                                        <img src='./images/pc/pm/page_left.svg' />
+                                    </span>
+                                    <div id='page'>
+                                        <span></span>
+                                        <span></span>
+                                        <span>...</span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span>
+                                        <img src='./images/pc/pm/page_right.svg' />
+                                    </span>
+                                </div>
+                                <span>Last</span>
+                            </div>
+                            -->
+                        </div>
+                      </div>
+                      <!-- 这个是STATUS HISTORY -->
+                      <%- partial("./public_component/status_history.ejs")%>
+                      </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <div class="cancel">Cancel</div>
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/pm/js/change_select.js"></script>
+  <script type="text/javascript">
+    window.onload=function(){
+      change_select('change','left');
+    }
+  </script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

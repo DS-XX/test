@@ -1224,6 +1224,27 @@ select option{
     line-height: 23px;
     color: #505050;
 }
+.tenant_card  .personal .cheque div input {
+    outline: none;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C4C4C4;
+    height: 40px;
+    padding: 10px;
+}
+.tenant_card  .personal .cheque div input::-webkit-input-placeholder{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #C4C4C4;
+}
 .tenant_card .personal .choose{
     display: flex;
     flex-direction: row;

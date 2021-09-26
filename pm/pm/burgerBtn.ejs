@@ -1,0 +1,29 @@
+<div class="burgerBtn activeBar" id="burgerBtn">
+  <div class="burger-bar burger-top"></div>
+  <div class="burger-bar burger-middle"></div>
+  <div class="burger-bar burger-bottom"></div>
+</div>
+
+<script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+<script type="text/javascript">
+  //burgerBtn
+  function toggleSidebar() {
+    $("#burgerBtn").toggleClass("activeBar");
+    $(".sideMenu").toggleClass("hiddenSide");
+    if(!$("#burgerBtn").hasClass("activeBar")) {
+      $(".sideMenu").addClass("hiddenContent");
+
+    } else{
+      window.setTimeout(function(){$(".sideMenu").removeClass("hiddenContent");}, 300);
+
+    }
+
+    // $(".user-info-head").toggleClass("hiddenContent");
+    // $(".side-bar-item").toggleClass("hiddenContent");
+  }
+
+  $("#burgerBtn").on("click tap", function() {
+    toggleSidebar();
+  });
+
+</script>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/calender.css" />
+    <link rel="stylesheet" href="/pm/style/yes_no.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <!-- 白色地的顶部 查找 -->
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                <div class="landlord_card">
+                    <div class="top_add">
+                      <h1>Landlord 1</h1>
+                      <span id="add_new">Add New</span>
+                    </div>
+                    <div class="row_line">
+                        <div>
+                            <h1>Landlord ID#</h1>
+                            LL123456
+                        </div>
+                        <div>
+                          <h1>First Name</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Last Name</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Birthday</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Address</h1>
+                          LL123456
+                      </div><div>
+                          <h1>City</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Province/Territory/Area</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Country</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Postal Code</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Phone 1</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Phone 2</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Phone 3</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Email 1</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Email 2</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Email 3</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Landlord ID#Non-Resident of Canada3456</h1>
+                          112313
+                      </div>
+                      <div>
+                          <h1>ITN/SIN</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Percentage of Ownership</h1>
+                          <input placeholder="% here"/>
+                      </div>
+                    </div>
+
+                </div>
+                <div class="landlord_card">
+                    <div class="top_add">
+                        <h1 style="margin-bottom: 15px;">MONTHLY STATEMENT EMAILS</h1>
+                      </div>
+                      <p class="automatic">
+                        Turn on automatic Monthly Statements for all emails.
+                      </p>
+                      <div id="select" class="select">
+                          <div>
+                              <input  type="radio" name="option" checked onclick="getRadio();">
+                              Yes
+                          </div>
+                          <div>
+                            <input  type="radio" name="option" onclick="getRadio();" >
+                            No
+                          </div>
+                      </div>
+                </div>
+                <div class="landlord_card">
+                  <div class="top_add">
+                      <h1 style="margin-bottom: 25px;">BANKING INFORMATION</h1>
+                  </div>
+                  <div class="banking">
+                    <h1>Cheque</h1>
+                    <div class="cheque" style="align-items: flex-start;">
+                      <div class="choose">
+                        <input type="radio" name="cheque">
+                        Cheque
+                      </div>
+                      Pay to
+                      <select>
+                        <option>Select payee</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="banking">
+                    <h1>E.F.T. (Electronic Fund Transfer)</h1>
+                    <div class="eft">
+                      <div class="select">
+                        <input type="radio" name="cheque" />
+                        E.F.T. (Electronic Fund Transfer)
+                      </div>
+                      <!-- 选择银行的 -->
+                      <h1>Select Bank</h1>
+                      <div id='banks'>
+                      </div>
+                      <!-- Name of Financial Institute -->
+                      <h1>Name of Financial Institute</h1>
+                      <div class="row_line"><div><input  style="color: #505050;"/></div></div>
+                      <!-- Branch Address -->
+                      <h1>Branch Address</h1>
+                      <div class="row_line">
+                        <div>
+                          <h1>Apt #</h1>
+                          <input placeholder="Apt #">
+                        </div>
+                        <div>
+                          <h1>Street #</h1>
+                          <input placeholder="Street # ">
+                        </div><div>
+                          <h1>Street Name</h1>
+                          <input placeholder="Street name">
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>City</h1>
+                          <input placeholder="City">
+                        </div>
+                        <div>
+                          <h1>Province/Territory/Area</h1>
+                          <select>
+                            <option>British Columbia</option>
+                          </select>
+                        </div><div>
+                          <h1>Country</h1>
+                          <input placeholder="Canada">
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Postal Code</h1>
+                          <input placeholder="Postal code here"/>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Type</h1>
+                          <select>
+                            <option>Chequeing</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class='row_line'>
+                        <div>
+                          <h1>Account #</h1>
+                          <input/>
+                        </div>
+                        <div>
+                          <h1>Transit #</h1>
+                          <input placeholder='Transit # here'/>
+                        </div>
+                        <div>
+                          <h1>Institution #</h1>
+                          <input placeholder='Institution # here'/>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="bottom_submit">
+                  <div class="cancel">Previous</div>
+                  <div class="next">Next</div>
+                </div>
+              </div>
+              </div>
+
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- 弹窗 -->
+    <div class="landlord_modal" id="modal_out" style="display: none;position: fixed;flex-direction: column;top: 0;width:100%">
+      <div class="my_modal" id="my_modal">
+        <div class="head_blue">
+          Add Landlord(s)
+        </div>
+        <div class="contain">
+          <!-- 两个选择框 1 -->
+          <div class="select_1" >
+            <h1 class="title">Personal</h1>
+            <div class="cheque">
+              <div class="choose">
+                <input type="radio" name="per_cor">
+                Personal
+              </div>
+              <div class="row_line">
+                <div>
+                  <h1>First Name</h1>
+                  <input placeholder="First Name"/>
+                </div>
+                <div>
+                  <h1>Last Name</h1>
+                  <input placeholder="Last Name"/>
+                </div>
+                <div class="column">
+                  <h1>Birth date (optional)</h1>
+                  <div id="begin-date" style="flex-direction: row;">
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+          <!-- 两个选择框 2 -->
+        <div class="select_1" >
+          <h1 class="title">Corporation</h1>
+          <div class="cheque">
+            <div class="choose">
+              <input type="radio" name="per_cor">
+              Corporation
+            </div>
+            <div class="row_line">
+              <div>
+                <h1>Company Name</h1>
+                <input placeholder="1234567 BC LTD"/>
+              </div>
+              <div>
+                <h1>GST # (optional)</h1>
+                <input placeholder="GST #"/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="automatic">
+          Non-Resident of Canada
+        </div>
+          <div id="select" class="select_yesno">
+            <div>
+                <input  type="radio" name="canada" checked onclick="getRadio();">
+                Yes
+            </div>
+            <div>
+              <input  type="radio" name="canada" onclick="getRadio();" >
+              No
+            </div>
+        </div>
+        <div class='row_line'>
+          <div>
+            <h1>Apt # (optional)</h1>
+            <input placeholder='Apt # (optional)'/>
+          </div>
+          <div>
+            <h1>Street #</h1>
+            <input placeholder='Street #'/>
+          </div>
+          <div>
+            <h1>Street Name</h1>
+            <input placeholder='Street Name'/>
+          </div>
+        </div>
+        <div class='row_line'>
+          <div>
+            <h1>City</h1>
+            <input placeholder='City here'/>
+          </div>
+          <div>
+            <h1>Province/Territory/Area</h1>
+            <select>
+              <option>British Columbia</option>
+            </select>
+          </div>
+          <div>
+            <h1>Country</h1>
+            <input placeholder='Country here'/>
+          </div>
+          <div>
+            <h1>Postal Code</h1>
+            <input placeholder='Postal code here'/>
+          </div>
+        </div>
+        <div class='row_line'>
+          <div>
+            <h1>Phone 1 (optional)</h1>
+            <input type="number" placeholder='xxx'/>
+          </div>
+          <div>
+            <h1>Phone 2 (optional)</h1>
+            <input type="number" placeholder='xxx'/>
+          </div>
+          <div>
+            <h1>Phone 3 (optional)</h1>
+            <input type="number" placeholder='xxx'/>
+          </div>
+        </div>
+        <div class='row_line'>
+          <div>
+            <h1>Email 1 (optional)</h1>
+            <input placeholder='xxx'/>
+          </div>
+          <div>
+            <h1>Email 2 (optional)</h1>
+            <input placeholder='xxx'/>
+          </div>
+          <div>
+            <h1>Email 3 (optional)</h1>
+            <input placeholder='xxx'/>
+          </div>
+        </div>
+        <div class="bottom_submit" style="justify-content: flex-start;margin: 0;">
+          <div class="cancel">Cancel</div>
+          <div class="next">Submit</div>
+        </div>
+      </div>
+    </div>
+  <div>
+</div>
+  </body>
+  <!-- 日历的js -->
+  <!-- 插入银行的div选项 -->
+<script type="text/javascript" src='/pm/js/bank.js'></script>
+<!-- 引入弹窗的js -->
+<script type="text/javascript" src='/pm/js/modal.js'>
+ </script>
+ <script type="text/javascript" src='/pm/js/background_change.js'></script>
+ <!-- 弹窗显示 -->
+<script type="text/javascript" >
+  window.onload=function(){
+  insert_bank();
+  change_background('cheque','banking');
+  }
+ document.getElementById('add_new').onclick=function(e){
+   console.log(e);
+  modal('add_new','my_modal','modal_out'); //第一个按钮id，第二个弹窗id，第三个遮罩id
+  change_background('per_cor','select_1');
+ }
+</script>
+
+  <script type="text/javascript" src="/pm/js/calendar.min.js"></script>
+  <script type="text/javascript" src="/pm/js/calender.js"></script>
+
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

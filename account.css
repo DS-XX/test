@@ -249,3 +249,62 @@ select{
     width: 20px;
     height: 20px;
 }
+.file_background{
+    background: #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(34, 98, 198, 0.15);
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+.file_background .first{
+    min-width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.file_background .head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 0.5px solid rgba(34, 98, 198, 0.5);
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+}
+.file_background .body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.file_background .body .list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border: 0.5px solid rgba(34, 98, 198, 0.5); 
+    border-width: 0 0 0.5px 0;
+    width: 100%;
+}
+.file_background .body .list .first{
+
+}
+.file_background .body .list .first img{
+    width: 31px;
+    height: 25px;
+    margin-right: 23px;
+}
+.file_background .body .list .last_img{
+    width: 30px;
+    height: 20px;
+}

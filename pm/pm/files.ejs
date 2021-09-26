@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/calendar.min.css" />
+    <link rel="stylesheet" href="/pm/style/accounts.css" />
+    <link rel="stylesheet" href="/pm/style/table.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                  <div class="file_background">
+                    <div class="head">
+                        <h1 class="h1_16 row first">Name of File</h1>
+                        <h1 class="h1_16">Last Modified</h1>
+                    </div>
+                      <div class="body">
+                          <div class="list">
+                              <div class="row">
+                                  <div class="row first">
+                                      <img src="/images/pc/pm/file_blue.svg" />
+                                      <p>1.    Residential Tenancy Agreement （12 files )</p>
+                                  </div>
+                                      <p>07/20/2021</p>
+                              </div>
+                              <div>
+                                  <img class="last_img" src="/images/pc/pm/window_upload.svg" />
+                              </div>
+                          </div>
+                          <div class="list">
+                            <div class="row">
+                                <div class="row first">
+                                    <img src="/images/pc/pm/file_grey.svg" />
+                                    <p>1.    Residential Tenancy Agreement （12 files )</p>
+                                </div>
+                                    <p>07/20/2021</p>
+                            </div>
+                            <div>
+                                <img class="last_img" src="/images/pc/pm/window_upload.svg" />
+                            </div>
+                        </div>
+                        <div class="list">
+                          <div class="row">
+                              <div class="row first">
+                                  <img src="/images/pc/pm/file_grey.svg" />
+                                  <p>1.    Residential Tenancy Agreement （12 files )</p>
+                              </div>
+                                  <p>07/20/2021</p>
+                          </div>
+                          <div class="row">
+                              <img class="last_img" src="/images/pc/pm/window_upload.svg" />
+                              <img class="last_img" src="/images/pc/pm/file_pencil.svg" />
+                              <img class="last_img" src="/images/pc/pm/file_delete.svg" />
+                          </div>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <div class="cancel">Cancel</div>
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- edit的弹窗 -->
+    <div class="black_background" id="edit_modal_out" style="display: flex;display: none;" >
+      <div class="my_modal" id="edit_modal" style="display: flex;width: 650px;height: 700px;">
+      <div class="head_blue">
+        Edit Pay to Landlord
+       </div>
+      <div class="edit_management_fee card_white">
+          <div class="column">
+            <h1>Name of Folder</h1>
+            <input placeholder="Name of folder here" />
+          </div>
+          <div class="bottom_submit" style="justify-content: flex-start;">
+              <div class="cancel">Cancel</div>
+              <div class="next" id='fee_save'>Save</div>
+            </div>
+      </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/pm/js/modal.js"></script>
+  <script type="text/javascript">
+    document.getElementsByClassName('navigation_info')[0].innerHTML+=
+    '<span id="edit" style="position:absolute;bottom:0;right:0;" id="total_accounts" class="add_new">Add Folder</span>';
+    document.getElementById('edit','edit_modal','edit_modal_out');
+  </script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

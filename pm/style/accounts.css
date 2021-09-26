@@ -1,0 +1,326 @@
+.blue_border{
+  background: #FFFFFF;
+  border: 1px solid #2262C6;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+select{
+  outline: none;
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #505050;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.add_new{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  background: #00ADAD;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.select_blue_back{
+  background-color: #EEF5FF;;
+}
+.top_button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  background: #00ADAD;
+  border-radius: 3px;
+  height: 36px;
+  min-width: 80px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.input{
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 40px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #505050;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.input::placeholder{
+  color: #C4C4C4;
+}
+
+
+.margin_bottom_20{
+  margin-bottom: 20px;
+}
+.card_title{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #2262C6;
+  margin-bottom: 20px;
+}
+.row_center_start{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.row_between{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.row_between p{
+  margin: 0 !important;
+}
+.account_receivable{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.top_select_add{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.top_select_add .left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.top_select_add .left div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 181px;
+  background: rgba(34, 98, 198, 0.15);
+  border: 1px solid rgba(34, 98, 198, 0.5);
+  border-width: 1px 1px 0 1px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(34, 98, 198, 0.5);
+  margin-right: 2px;
+}
+.top_select_add .left .select{
+  background: #FFFFFF;
+  color: #2262C6;
+  border: none;
+  border-radius: 3px 3px 0 0;
+}
+.account_receivable .top_select_add .add{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  background: #00ADAD;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+.history{
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 5px rgba(34, 98, 198, 0.15);
+  border-radius: 3px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+}
+.history h1{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #2262C6;
+  margin-bottom: 20px;
+}
+.history .row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.history .row li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 141px;
+  margin-right: auto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #505050;
+
+}
+.history .row li span{
+  font-weight: bold;
+  margin-right: 3px;
+}
+.history .row li:first-child{
+  margin-left: 0;
+}
+.history .row li:last-child{
+  margin-right: 0;
+}
+.history .row li img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.management .top_select_add .left div{
+  width: 184px;
+  height: 60px;
+  white-space:normal; word-break:break-all;
+  padding: 10px 28px;
+}
+.management .management_fee_setup{
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 2px 2px 5px rgba(34, 98, 198, 0.15);
+  border-radius: 3px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+.management  div{
+  display: flex;
+  display: row;
+}
+.management .management_fee_setup .input{
+  background: #FFFFFF;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 40px;
+  margin: 0 5px 0 10px;
+}
+.management .management_fee_setup p{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #505050;
+}
+.management .management_fee_setup span{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  color: #505050;
+}
+.radio{
+  width: 20px;
+  height: 20px;
+}
+.file_background{
+  background: #FFFFFF;
+  box-shadow: 2px 2px 5px rgba(34, 98, 198, 0.15);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+}
+.file_background .first{
+  min-width: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.file_background .head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0.5px solid rgba(34, 98, 198, 0.5);
+  box-sizing: border-box;
+  padding: 20px;
+  width: 100%;
+}
+.file_background .body{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.file_background .body .list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(34, 98, 198, 0.5);
+  border-width: 0 0 0.5px 0;
+  width: 100%;
+}
+.file_background .body .list .first{
+
+}
+.file_background .body .list .first img{
+  width: 31px;
+  height: 25px;
+  margin-right: 23px;
+}
+.file_background .body .list .last_img{
+  width: 30px;
+  height: 20px;
+}

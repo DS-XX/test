@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                  <!-- 这个是property的card -->
+                  <div class="landlord_card">
+                    <h1 class="h1_20">PROPERTY</h1>
+                    <div class="row_line">
+                      <div class="column">
+                          <h1>Address</h1>
+                          <p>Apt 123 1234 Marine Dr</p>
+                      </div>
+                      <div class="column">
+                          <h1>City</h1>
+                          <p>Vancouver</p>
+                      </div>
+                      <div class="column">
+                          <h1>Province</h1>
+                          <p>British Columbia</p>
+                      </div>
+                      <div class="column">
+                          <h1>Country</h1>
+                          <p>1234</p>
+                      </div>
+                      <div class="column">
+                          <h1>Postal Code</h1>
+                          <p>1234</p>
+                      </div>
+                    </div>
+                    <div class="row_line">
+                        <div class="column">
+                          <h1>Type</h1>
+                          <p>1234</p>
+                        </div>
+                        <div class="column">
+                          <h1>Rentable Area</h1>
+                          <p>1234</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                      <h1 class="black_h1">Description</h1>
+                      <p>1234</p>
+                    </div>
+                </div>
+                  <!-- 这个是landlord的card -->
+                  <div class="landlord_card">
+                    <div class="top_add">
+                      <h1>Landlord 1</h1>
+                    </div>
+                    <div class="row_line">
+                        <div>
+                            <h1>Landlord ID#</h1>
+                            LL123456
+                        </div>
+                        <div>
+                          <h1>First Name</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Last Name</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Birthday</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Address</h1>
+                          LL123456
+                      </div><div>
+                          <h1>City</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Province/Territory/Area</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Country</h1>
+                          LL123456
+                      </div><div>
+                          <h1>Postal Code</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Phone 1</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Phone 2</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Phone 3</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Email 1</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Email 2</h1>
+                          LL123456
+                      </div>
+                      <div>
+                          <h1>Email 3</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Landlord ID#Non-Resident of Canada3456</h1>
+                          112313
+                      </div>
+                      <div>
+                          <h1>ITN/SIN</h1>
+                          LL123456
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div>
+                          <h1>Percentage of Ownership</h1>
+                          <p>90%</p>
+                      </div>
+                    </div>
+
+                </div>
+                <!-- 这个是TENANT的card -->
+                <div class="landlord_card">
+                  <h1 class="h1_20">TENANT</h1>
+                  <h1 class="h1_16">Personal</h1>
+
+                <div class="row_line">
+                    <div class="column">
+                        <h1>First Name</h1>
+                        LL123456
+                    </div>
+                    <div class="column">
+                        <h1>Last Name</h1>
+                      LL123456
+                  </div>
+                </div>
+                <div class="row_line">
+                    <div class="column">
+                        <h1>Address</h1>
+                      LL123456
+                  </div>
+                  <div class="column">
+                    <h1>City</h1>
+                      LL123456
+                  </div>
+                  <div class="column">
+                    <h1>Province/Territory/Area</h1>
+                      LL123456
+                  </div>
+                  <div class="column">
+                    <h1>Country</h1>
+                      LL123456
+                  </div>
+                  <div class="column">
+                    <h1>Postal Code</h1>
+                      LL123456
+                  </div>
+                </div>
+                <div class="row_line">
+                  <div>
+                      <h1>Phone 1</h1>
+                      LL123456
+                  </div>
+                  <div>
+                      <h1>Phone 2</h1>
+                      LL123456
+                  </div>
+                  <div>
+                      <h1>Phone 3</h1>
+                      LL123456
+                  </div>
+                </div>
+                <div class="row_line">
+                  <div>
+                      <h1>Email 1</h1>
+                      LL123456
+                  </div>
+                  <div>
+                      <h1>Email 2</h1>
+                      LL123456
+                  </div>
+                  <div>
+                      <h1>Email 3</h1>
+                      LL123456
+                  </div>
+                </div>
+
+                </div>
+                  <!-- 这个是MANAGEMENT的card -->
+                <div class="landlord_card">
+                  <h1 class="h1_20">MANAGEMENT</h1>
+                  <div class="row_between">
+                      <div class="column">
+                          <h1>Management Fee Setup</h1>
+                          <p>6% of Monthly Income</p>
+                      </div>
+                      <p>$120</p>
+                  </div>
+                  <div class="row_between">
+                      <h1>GST</h1>
+                      <p>$6</p>
+                  </div>
+                  <div class="row_between">
+                      <h1>Total</h1>
+                      <p class="total_amount">$6</p>
+                  </div>
+                  <h1 class="black_h1">Management Fee Distribution</h1>
+                  <div class="row_between">
+                    <p>V123456789</p>
+                    <p>John Doe</p>
+                    <p>CREST</p>
+                    <p>90%</p>
+                    <p>$1,800</p>
+                  </div>
+                  <div class="row_between">
+                    <h1>Total</h1>
+                    <p class="total_amout">$2,000</p>
+                  </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <div class="cancel">Cancel</div>
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" type="text/css" href="/pm/style/calendar.min.css">
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <!-- 白色地的顶部 查找 -->
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                  <form action="?" id="form1">
+                  <!-- PROPERTY -->
+                  <div class="property_input margin_bottom_20">
+                    <div class="left">
+                      <h1 class="h1_20">Property</h1>
+                      <div class="row_line">
+                        <div>
+                          <h1>Apt # (optional)</h1>
+                          <input tabindex="1" placeholder="Apt #"/>
+                        </div>
+                        <div>
+                          <h1>Street #</h1>
+                          <input tabindex="2" placeholder="Street # "/>
+                        </div>
+                        <div>
+                          <h1>Street Name</h1>
+                          <input tabindex="3" placeholder="Street name"/>
+                        </div>
+
+
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>City</h1>
+                          <input tabindex="4" placeholder="City"/>
+                        </div>
+                        <div>
+                          <h1>Province/Territory/Area</h1>
+                          <select  tabindex="5" placeholder="British Columbia" style="width: 200px;">
+                          <option>
+                            British Columbia
+                          </option>
+                          </select>
+
+                        </div>
+                        <div>
+                          <h1>Country</h1>
+                          <input tabindex="6" placeholder="Canada"/>
+                        </div>
+
+
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Postal Code</h1>
+                          <input tabindex="7" placeholder="Postal code here"/>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Type</h1>
+                          <input tabindex="8" placeholder="Condo"/>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Rentable Area (optional)</h1>
+                          <input tabindex="9" placeholder="0"/>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Description (optional)</h1>
+                          <input tabindex="10" placeholder="Description here"/>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <h1>Upload Photo</h1>
+                      <div>
+                        <img
+                        src='/images/pc/pm/upload_pic.svg'
+                        />
+                        <p>Suggested: 500px x 500px</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TENANCY DETAIL  -->
+                  <div class="property_detail">
+                    <h1 class="h1_20">Tenancy Detail</h1>
+                    <div class="row_space">
+                      <div class="row_line" style="margin-bottom: 0;">
+                        <div>
+                          <h1>Gross Rent</h1>
+                          <input tabindex="11" type="number" placeholder="$0"/>
+                        </div>
+                        <div>
+                          <h1>Parking (optional)</h1>
+                          <input tabindex="12" type="number" placeholder="$0"/>
+                        </div>
+                        <div>
+                          <h1>Utility (optional)</h1>
+                          <input tabindex="13" type="number" placeholder="$0"/>
+                        </div>
+                        <div>
+                          <h1>Other Income(optional)</h1>
+                          <input tabindex="14" type="number" placeholder="$0"/>
+                        </div>
+                      </div>
+                      <div>
+                        Total Monthly Income:
+                        <p style="color: #00ADAD;"> $12,599</p>
+                      </div>
+                    </div>
+                    <div class="column margin_bottom_20">
+                      <h1>Deposit (optional)</h1>
+                      <input tabindex="15" type="number" placeholder="$0"/>
+                    </div>
+                    <div class="column margin_bottom_20">
+                      <h1>Gross Rent</h1>
+                      <input tabindex="16" type="number" placeholder="$0"/>
+                    </div>
+                    <div class="column margin_bottom_20">
+                      <h1>Open Balance (optional)</h1>
+                      <input tabindex="17" type="number" placeholder="$0"/>
+                    </div>
+                    <!-- 下面的日历和时间差 -->
+                    <div class="row_space">
+                      <div class="row_line">
+                          <div>
+                            <h1>Start date</h1>
+                            <div id="begin-date" tabindex="18" style="width: 200px;">
+                            </div>
+                          </div>
+                          <div>
+                            <h1>Expiry date</h1>
+                            <div id="end-date" tabindex="19" style="width: 200px;">
+                            </div>
+                          </div>
+
+                      </div>
+                      <div>
+                        <span id="TimeD"></span>
+                      </div>
+                        </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <input class="cancel" type="reset" value="cancel">
+                    <input class="next"  type="submit" value="next">
+                  </div>
+                </form>
+
+                </div>
+              <div>
+
+            </div>
+          </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- 日历的js -->
+  <script type="text/javascript" src="/pm/js/calendar.min.js"></script>
+  <script type="text/javascript" src="/pm/js/calendar.js"></script>
+
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+    <link rel="stylesheet" href="/pm/style/accounts.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/table.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                  <!-- 这个是内容 -->
+                  <div class="account_receivable">
+                    <div class="top_select_add">
+                      <div class="left">
+                          <div class="select">ACCOUNTS RECEIVABLE</div>
+                          <div>STATUS HISTORY</div>
+                      </div>
+                      <div class="add" id='add_new'>
+                          Add New
+                      </div>
+                    </div>
+                    <!-- 这个是ACCOUNTS RECEIVABLE -->
+                    <div class="properties_card" name="change" style="border-radius: 0 3px 3px 3px;">
+                  <div class="top_content">
+                      <div class="left_filter">
+                          Filter by:
+                          <select><option>PENDING</option></select>
+                      </div>
+                  </div>
+                  <table>
+                      <thead>
+                          <tr id='t_head'>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th><div class="row">
+                                  <img src="/images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                                  PENDING
+                                  <img id='edit' src="/images/pc/pm/pencil.svg" style="width: 16px;height: 16px;margin-left: 10px;"/>
+                              </div></th>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="bottom">
+                      <p class="Viewing">Viewing 6 out of 100</p>
+                      <div class="bottom_total">
+                          Total:
+                          <div>
+                              <span>$1,000,000</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="bottom_page">
+                      <span>First</span>
+                      <div class="middle">
+                          <span>
+                              <img src='/images/pc/pm/page_left.svg' />
+                          </span>
+                          <div id='page'>
+                              <span></span>
+                              <span></span>
+                              <span>...</span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                          <span>
+                              <img src='/images/pc/pm/page_right.svg' />
+                          </span>
+                      </div>
+                      <span>Last</span>
+                  </div>
+
+                  </div>
+                    <!-- 这个是STATUS HISTORY -->
+                    <div class="history" name="change" style="display: none;">
+                      <h1>Status history</h1>
+                      <div class="row">
+                        <li>09/01/2021 9:35AM</li>
+                        <li><span>PM12345AR1234: </span> Payment Method</li>
+                        <li>Cheque → PAD</li>
+                        <li><img src="/images/pc/pm/head_pic.png"/>Jay Kirkland</li>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <div class="cancel">Previous</div>
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- add new的弹窗 -->
+  <div class="black_background" id="modal_out" style="display: none;position: fixed;flex-direction: column;top: 0;width:100%;height: 100%;">
+    <div class="my_modal" id="my_modal" style="display: flex;width: 650px;max-height: 700px;">
+      <div class="head_blue">
+        Add Accounts Receivable
+      </div>
+      <div class="add_account_main">
+            <div class="row">
+                <h1>Brokerage:</h1>
+                <p>Remax Crest</p>
+            </div>
+            <div class="row">
+                <h1>Office:</h1>
+                <p>Richmond</p>
+            </div>
+            <div class="row">
+                <h1>Agent:</h1>
+                <p>Jason Wang</p>
+            </div>
+            <div class="column">
+                <h1>Due Date</h1>
+                <div id='begin-date' style='width: 300px;'>
+            </div>
+            <div class="column">
+                <h1>Type</h1>
+                <select class="input">
+                    <option>Select type</option>
+                </select>
+            </div>
+            <div class="column">
+                <h1>Amount</h1>
+                <input class="input" placeholder="Amount here" />
+            </div>
+            <div class="column">
+                <h1>Total Amount</h1>
+                <p>$1,000</p>
+            </div>
+            <div class="column">
+                <h1>Status</h1>
+                <select class="input">
+                    <option>Select status</option>
+                </select>
+            </div>
+            <div class="column">
+                <h1>Upload Receipt</h1>
+                <div class="upload">
+                    <div>
+                        <img src="/images/pc/pm/upload.svg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom_submit" style="justify-content: flex-start;margin-top: 10px;">
+                <div class="cancel">Cancel</div>
+                <div class="next">Save</div>
+            </div>
+      </div>
+    </div>
+</div>
+
+</div>
+<!-- edit的弹窗 -->
+<div class="black_background" id="edit_modal_out" style="display: none;">
+  <div class="my_modal" id="edit_modal" style="display: none;width: 650px;max-height: 700px;">
+    <div class="head_blue">
+      Edit Accounts Receivable
+    </div>
+    <div class="add_account_main add_account_main">
+          <div class="row">
+              <h1>ID::</h1>
+              <p>Remax Crest</p>
+          </div>
+          <div class="row">
+              <h1>Brokerage::</h1>
+              <p>Richmond</p>
+          </div>
+          <div class="row">
+              <h1>Office::</h1>
+              <p>Jason Wang</p>
+          </div>
+          <div class="row">
+              <h1>Agent:</h1>
+              <p>Jason Wang</p>
+          </div>
+          <div class="column">
+              <h1>Pay To</h1>
+              <select class="input">
+                  <option>Remax Crest Realty</option>
+              </select>
+          </div>
+          <div class="column">
+              <h1>Due Date</h1>
+              <div id='begin-date' style='width: 300px;'>
+          </div>
+          <div class="column">
+              <h1>Type</h1>
+              <select class="input">
+                  <option>Select type</option>
+              </select>
+          </div>
+          <div class="column">
+              <h1>Payment Method</h1>
+              <select class="input">
+                  <option>Cheque</option>
+              </select>
+          </div>
+          <div class="column">
+              <h1>Amount</h1>
+              <input class="input" placeholder="Amount here" />
+          </div>
+          <div class="column">
+              <h1>Total Amount</h1>
+              <p>$1,000</p>
+          </div>
+          <div class="column">
+              <h1>Status</h1>
+              <select class="input">
+                  <option>Select status</option>
+              </select>
+          </div>
+          <div class="column">
+              <h1>Upload Receipt</h1>
+              <div class="upload">
+                  <div>
+                      <img src="/images/pc/pm/upload.svg"/>
+                  </div>
+              </div>
+          </div>
+          <div class="bottom_submit" style="justify-content: flex-start;margin-top: 10px;">
+              <div class="cancel">Cancel</div>
+              <div class="next">Save</div>
+          </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </body>
+  <script type="text/javascript" src="/pm/js/change_select.js"></script>
+  <script type="text/javascript" src='/pm/js/modal.js'></script>
+  <!-- 表格填写 -->
+<script type="text/javascript">
+  const name = new Array('ID','PAY TO', 'DUE DATE' ,'TYPE','PAYMENT METHOD' ,'AMOUNT','RECEIPT','STATUS');
+  for(var i=0;i<name.length;i++){
+      if(name[i]=='AMOUNT'){
+          document.getElementById('t_head').innerHTML+=`<th id='amount'>${name[i]}</th>`;
+      }
+      else{
+        document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+
+      }
+      // else{
+      //     document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
+      // }
+  }
+</script>
+  <script type="text/javascript">
+  window.onload=function(){
+    change_select('change','left');
+    document.getElementById('add_new').onclick=function(){
+      modal('add_new','my_modal','modal_out');
+    }
+    document.getElementById('edit').onclick=function(){
+      modal('edit','edit_modal','edit_modal_out');
+    }
+  }
+   </script>
+  <script type="text/javascript" src="/pm/js/calendar.min.js"></script>
+  <script type="text/javascript" src="/pm/js/calender.js"></script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

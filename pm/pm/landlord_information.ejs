@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <!-- 导航 箭头 -->
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <!-- PROPERTY INFO -->
+                  <div class="view_info_white">
+                    <div class="navigation_info">
+                      <h1 class="h1_18">LANDLORD INFORMATION</h1>
+                      <h2  class="h1_16">ADDress:57355 NO.3a</h2>
+                      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
+                      <p>
+                        Ref ID: R008-2021-07-0002
+                      </p>
+                      <p>PM ID: PM12345</p>
+                    </div>
+                    <div>
+                      <span style="background:#00ADAD;" id="add_new">Add New</span>
+                    </div>
+                  </div>
+                  <div class="card_white">
+                    <div class="top_between">
+                        <h1>LANDLORD INFORMATION</h1>
+                        <div>
+                            <span style="background: #FF5B60;">Delete</span>
+                            <span style="background: #00517D;">Edit</span>
+                        </div>
+                    </div>
+                    <div class='row_line'>
+                        <div>
+                            <h1>Landlord ID#</h1>
+                            <p>LL123456</p>
+                        </div>
+                        <div>
+                            <h1>First Name</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Last Name</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Birthday</h1>
+                            <p>xxx</p>
+                        </div>
+                    </div>
+                    <div class='row_line'>
+                        <div>
+                            <h1>Address</h1>
+                            <p>LL123456</p>
+                        </div>
+                        <div>
+                            <h1>City</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Province/Territory/Area</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Country</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Postal Code</h1>
+                            <p>xxx</p>
+                        </div>
+                    </div>
+                    <div class='row_line'>
+                        <div>
+                            <h1>Phone 1</h1>
+                            <p>LL123456</p>
+                        </div>
+                        <div>
+                            <h1>Phone 2</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Phone 3</h1>
+                            <p>xxx</p>
+                        </div>
+                    </div>
+                    <div class='row_line'>
+                        <div>
+                            <h1>Email 1</h1>
+                            <p>LL123456</p>
+                        </div>
+                        <div>
+                            <h1>Email 2</h1>
+                            <p>xxx</p>
+                        </div>
+                        <div>
+                            <h1>Email 3</h1>
+                            <p>xxx</p>
+                        </div>
+                    </div>
+                    <div class='row_line'>
+                        <div>
+                            <h1>Non-Resident of Canada</h1>
+                            <p>LL123456</p>
+                        </div>
+                        <div>
+                            <h1>ITN/SIN</h1>
+                            <p>xxx</p>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 弹窗search -->
+    <div class="black_background" id="modal_out" >
+      <div class="my_modal" id="my_modal" style="display: flex;width: 1115px;height: 700px;">
+        <div class="head_blue">
+          Add Landlord(s)
+        </div>
+        <div class="search_landlord_main">
+              <h1 class="small_title">Search for Landlord(s)</h1>
+              <div class="row_line">
+                  <div>
+                      <h1>Landlord Name</h1>
+                      <input placeholder="John Doe" />
+                  </div>
+                  <div>
+                      <h1>Landlord ID#</h1>
+                      <input placeholder="LL123456" />
+                  </div>
+                  <div>
+                      <h1>ID# (Passport/Driver’s License/Identity Card)</h1>
+                      <input placeholder="John Doe" />
+                  </div>
+              </div>
+              <h1 class="small_title">OR</h1>
+              <div class="row_line">
+                  <div>
+                      <h1>Company Name</h1>
+                      <input placeholder="Company name here" />
+                  </div>
+              </div>
+              <div class="search_btn">Search</div>
+              <h1 class="big_title">Search RESULTS</h1>
+              <div class="under_big">1 found. <span style="color:#2262C6;">Select to add.</span></div>
+              <!-- 第一个选择 -->
+              <div class="select_1" style="flex-direction: column;">
+                  <div class="row">
+                      <input type="radio" number="search" name="select">
+                      <p>R12344561</p>
+                  </div>
+                  <div class="row_line">
+                      <div>
+                          <h1>Landlord ID#</h1>
+                          LL123456
+                      </div>
+                      <div>
+                        <h1>First Name</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Last Name</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Birthday</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Address</h1>
+                        LL123456
+                    </div><div>
+                        <h1>City</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Province/Territory/Area</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Country</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Postal Code</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Phone 1</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Phone 2</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Phone 3</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Email 1</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Email 2</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Email 3</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Non-Resident of Canada</h1>
+                        yes
+                    </div>
+                    <div>
+                        <h1>ITN/SIN</h1>
+                        000 000 000
+                    </div>
+                  </div>
+              </div>
+              <!-- 第二个选择 -->
+              <div class="select_1" style="flex-direction: column;">
+                  <div class="row">
+                      <input type="radio" number="search" name='select'>
+                      <p>R12344561</p>
+                  </div>
+                  <div class="row_line">
+                      <div>
+                          <h1>Landlord ID#</h1>
+                          LL123456
+                      </div>
+                      <div>
+                        <h1>First Name</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Last Name</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Birthday</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Address</h1>
+                        LL123456
+                    </div><div>
+                        <h1>City</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Province/Territory/Area</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Country</h1>
+                        LL123456
+                    </div><div>
+                        <h1>Postal Code</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Phone 1</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Phone 2</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Phone 3</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Email 1</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Email 2</h1>
+                        LL123456
+                    </div>
+                    <div>
+                        <h1>Email 3</h1>
+                        LL123456
+                    </div>
+                  </div>
+                  <div class="row_line">
+                    <div>
+                        <h1>Non-Resident of Canada</h1>
+                        yes
+                    </div>
+                    <div>
+                        <h1>ITN/SIN</h1>
+                        000 000 000
+                    </div>
+                  </div>
+              </div>
+              <div class="bottom_submit" style="justify-content: flex-start;">
+                <div class="cancel">Cancel</div>
+                <div class="next">Add</div>
+              </div>
+        </div>
+  </div>
+  </div>
+  </body>
+  <script type="text/javascript" src="/pm/js/background_change.js"></script>
+  <script type="text/javascript" src="/pm/js/modal.js"></script>
+  <script type="text/javascript">
+  document.getElementById('add_new').onclick=function(){
+    change_background('select','select_1');
+    modal('add_new','my_modal','modal_out');
+  }
+  </script>
+
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

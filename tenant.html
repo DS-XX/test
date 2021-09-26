@@ -194,6 +194,65 @@
                         PAD (Pre-Authorized Debit) 
                     </div>
                     <div id="banks"></div>
+                    <div class="column">
+                      <h1>Name of Financial Institute</h1>
+                      <input>
+                    </div>
+                    <h1 style="margin: 20px 0 10px 0;">Branch Address</h1>
+                    <div class="row_line">
+                      <div class="column">
+                        <h1>Apt # (optional)</h1>
+                        <input>
+                      </div>
+                      <div class="column">
+                        <h1>Street #</h1>
+                        <input>
+                      </div>
+                      <div class="column">
+                        <h1>Street Name</h1>
+                        <input>
+                      </div>
+                    </div>
+                    <div class="row_line">
+                      <div class="column">
+                        <h1>City</h1>
+                        <input>
+                      </div>
+                      <div class="column">
+                        <h1>Province/Territory/Area</h1>
+                        <select>
+                          <option>British Columbia</option>
+                        </select>
+                      </div>
+                      <div class="column">
+                        <h1>Country</h1>
+                        <input>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <h1>Name of Financial Institute</h1>
+                      <input>
+                    </div>
+                    <div class="column" style="margin: 20px 0;">
+                      <h1>Type</h1>
+                      <select>
+                        <option>Chequeing</option>
+                      </select>
+                    </div>
+                    <div class="row_line">
+                      <div class="column">
+                        <h1>Account #</h1>
+                        <input>
+                      </div>
+                      <div class="column">
+                        <h1>Transit #</h1>
+                        <input>
+                      </div>
+                      <div class="column">
+                        <h1>Institution #</h1>
+                        <input>
+                      </div>
+                    </div>
                 </div>
                 
             </div>
@@ -250,8 +309,12 @@
       for(var j=0;j<4;j++){
         var b = document.getElementsByClassName('select_bank')[i];
         if(i*4+j<bank_img.length){
-          b.innerHTML+=`<input type='radio' name=option_bank /><div><img src='./images/pc/pm/${bank_img[i*4+j]}.png'/></div>`;
-        }
+          if(j===3){
+        b.innerHTML+=`<input type='radio' name=option_bank  /><div style="margin:0"><img src='/images/pc/pm/${bank_img[i*4+j]}.png'/></div>`;
+      }
+      else{
+        b.innerHTML+=`<input type='radio' name=option_bank /><div><img src='/images/pc/pm/${bank_img[i*4+j]}.png'/></div>`;
+      }        }
         else if(i==2 && j==3){}
         else{
           b.innerHTML+=`<input type='radio' name=option_bank />other`;

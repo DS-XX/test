@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/calender.min.css" />
+
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <%- partial("./public_component/navigation_white.ejs")%>
+                  <%- partial("./public_component/information.ejs")%>
+                  <div class="tenant_card" id='select1'>
+                    <div class="top_add">
+                      <h1>Tenant 1</h1>
+                      <span>Add New</span>
+                    </div>
+                    <div class="personal" name='personal1'>
+                        <h1>Personal</h1>
+                        <div class="cheque">
+                            <div class="choose">
+                                <input type="radio" name="per_cor"/>
+                                Personal
+                            </div>
+                            <div class="row_line">
+                                <div>
+                                    <h1>First Name</h1>
+                                    <input />
+                                </div>
+                                <div>
+                                  <h1>Last Name</h1>
+                                  <input />
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="personal" name="personal1">
+                      <h1>Corporation</h1>
+                      <div class="cheque">
+                          <div class="choose">
+                              <input type="radio" name="per_cor"/>
+                              Corporation
+                          </div>
+                          <div class="row_line">
+                              <div>
+                                  <h1>Company Name</h1>
+                                  <input />
+                              </div>
+                              <div>
+                                  <h1>GST # (optional)</h1>
+                                  <input />
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="row_line">
+                      <div>
+                        <h1>Apt #</h1>
+                        <input placeholder="Apt #">
+                      </div>
+                      <div>
+                        <h1>Street #</h1>
+                        <input placeholder="Street # ">
+                      </div><div>
+                        <h1>Street Name</h1>
+                        <input placeholder="Street name">
+                      </div>
+                    </div>
+                  <div class="row_line">
+                  <div>
+                      <h1>City</h1>
+                      <input placeholder="City here">
+                  </div>
+                  <div>
+                      <h1>Province/Territory/Area</h1>
+                      <select>
+                          <option>British Columbia</option>
+                      </select>
+                  </div>
+                  <div>
+                      <h1>Country</h1>
+                      <input placeholder="Country here">
+                  </div>
+                  <div>
+                      <h1>Postal Code</h1>
+                      <input placeholder="Postal code here">
+                      </div>
+                  </div>
+                  <div class='row_line'>
+                      <div>
+                          <h1>Phone 1 (optional)</h1>
+                          <input placeholder='Phone here'/>
+                      </div>
+                      <div>
+                          <h1>Phone 2 (optional)</h1>
+                          <input placeholder='Phone here'/>
+                      </div>
+                      <div>
+                          <h1>Phone 3 (optional)</h1>
+                          <input placeholder='Phone here'/>
+                      </div>
+                  </div>
+                  <div class='row_line'>
+                      <div>
+                          <h1>Email 1 (optional)</h1>
+                          <input placeholder='Email here'/>
+                      </div>
+                      <div>
+                          <h1>Email 2 (optional)</h1>
+                          <input placeholder='Email here'/>
+                      </div>
+                      <div>
+                          <h1>Email 3 (optional)</h1>
+                          <input placeholder='Email here'/>
+                      </div>
+                  </div>
+                </div>
+                <div class="tenant_card" id='select2'>
+                    <div class="top_add">
+                      <h1>Rent Payment OptionS</h1>
+                    </div>
+                    <div class="personal" name='personal2'>
+                        <h1>Post-dated Cheque</h1>
+                        <div class="choose">
+                            <input type="radio" name="cheque"/>
+                            Post-dated Cheque
+                        </div>
+                    </div>
+                    <div class="personal" name='personal2'>
+                      <h1>PAD (Pre-Authorized Debit)</h1>
+                      <div class="cheque">
+                          <div class="choose">
+                              <input type="radio" name="cheque"/>
+                              PAD (Pre-Authorized Debit)
+                          </div>
+                          <div id="banks"></div>
+                          <div class="column">
+                            <h1>Name of Financial Institute</h1>
+                            <input>
+                          </div>
+                          <h1 style="margin: 20px 0 10px 0;">Branch Address</h1>
+                          <div class="row_line">
+                            <div class="column">
+                              <h1>Apt # (optional)</h1>
+                              <input>
+                            </div>
+                            <div class="column">
+                              <h1>Street #</h1>
+                              <input>
+                            </div>
+                            <div class="column">
+                              <h1>Street Name</h1>
+                              <input>
+                            </div>
+                          </div>
+                          <div class="row_line">
+                            <div class="column">
+                              <h1>City</h1>
+                              <input>
+                            </div>
+                            <div class="column">
+                              <h1>Province/Territory/Area</h1>
+                              <select>
+                                <option>British Columbia</option>
+                              </select>
+                            </div>
+                            <div class="column">
+                              <h1>Country</h1>
+                              <input>
+                            </div>
+                          </div>
+                          <div class="column">
+                            <h1>Name of Financial Institute</h1>
+                            <input>
+                          </div>
+                          <div class="column" style="margin: 20px 0;">
+                            <h1>Type</h1>
+                            <select>
+                              <option>Chequeing</option>
+                            </select>
+                          </div>
+                          <div class="row_line">
+                            <div class="column">
+                              <h1>Account #</h1>
+                              <input>
+                            </div>
+                            <div class="column">
+                              <h1>Transit #</h1>
+                              <input>
+                            </div>
+                            <div class="column">
+                              <h1>Institution #</h1>
+                              <input>
+                            </div>
+                          </div>
+                      </div>
+
+                  </div>
+                </div>
+                  <div class="bottom_submit">
+                    <div class="cancel">Previous</div>
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- 选择相应的选项之后背景颜色变化 -->
+  <script type="text/javascript" src="/pm/js/background_change_name.js"></script>
+<script type="text/javascript">
+  window.onload=function(){
+    change_background_name('per_cor','personal1');
+    change_background_name('cheque','personal2');
+  }
+</script>
+
+ <!-- 渲染银行 -->
+  <script type="text/javascript" src="/pm/js/bank.js"></script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

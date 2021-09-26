@@ -223,9 +223,9 @@
 <script type="text/javascript" src="./js/jquery-3.5.1/jquery-3.5.1.js"></script>
 <!-- 选项切换 -->
 <script type="text/javascript">
-    var change = document.getElementsByName('change');
-    var background = document.getElementsByClassName('left')[0].children;
-    window.onload=function () {
+     window.onload=function () {
+      var change = document.getElementsByName('change');
+      var background = document.getElementsByClassName('left')[0].children;
       for(let i of background){
         i.onclick=function(){
           i.className='select';
@@ -249,7 +249,7 @@
 </script>
 <!-- 表格填写 -->
 <script type="text/javascript">
-    const name = new Array('ID','PAY TO', 'DUE DATE' ,'TYPE','PAYMENT METHOD' ,'AMOUNT','RECEIPT','STATUS');    console.log(typeof(name));
+    const name = new Array('ID','PAY TO', 'DUE DATE' ,'TYPE','PAYMENT METHOD' ,'AMOUNT','RECEIPT','STATUS'); 
     for(var i=0;i<name.length;i++){
         if(name[i]=='AMOUNT'){
             document.getElementById('t_head').innerHTML+=`<th id='amount'>${name[i]}</th>`;

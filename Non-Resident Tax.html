@@ -63,7 +63,7 @@
           <li>Summary</li>
           </ul>
           <!-- PROPERTY INFO -->
-          <div class="navigation_info">
+          <div class="navigation_info" style="position: relative;">
             <h1>PROPERTY INFO</h1>
             <h2>ADDress:57355 NO.3a</h2>
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
@@ -72,12 +72,100 @@
             </p>
             <p>PM ID: PM12345</p>
           </div>
-          
+
+               <!-- 这个是内容 -->
+            <div>
+              <div class="top_select_add">
+                  <div class="left">
+                      <div class="select">NON-RESIDENT TAX</div>
+                      <div>STATUS HISTORY</div>
+                  </div>
+              </div>
+            </div>
+
+             <!--  NON-RESIDENT TAX  -->
+             <div class="management_services card_white" name="change" style="display: flex;">
+              <div class="properties_card" style="border:none;box-shadow: none;">
+                  <div class="top_content">
+                      <div class="left_filter">
+                          Filter by:
+                          <select><option>PENDING</option></select>
+                      </div>
+                  </div>
+                  <table>
+                      <thead>
+                          <tr>
+                              <th>ID</th>
+                              <th>LANDLORD ID</th>
+                              <th>PAY TO</th>
+                              <th>DUE DATE</th>
+                              <th>TYPE</th>
+                              <th name='accounts'>PAYMENT METHOD</th>
+                              <th name='accounts'>AMOUNT</th>
+                              <th>STATUS</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th>PM12345</th>
+                              <th><div class="status">
+                                  <img src="./images/pc/pm/message.svg" style="width:20px;height:20px;margin-right:5px"/>
+                                  PENDING
+                                  <img id='' src="./images/pc/pm/pencil.svg" style="width: 16px;height: 16px;margin-left: 10px;"/>
+                              </div></th>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <div class="bottom">
+                      <p class="Viewing">Viewing 6 out of 100</p>
+                      <div class="bottom_total">
+                          Total:
+                          <div id='total'>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- <div class="bottom_page">
+                      <span>First</span>
+                      <div class="middle">
+                          <span>
+                              <img src='./images/pc/pm/page_left.svg' />
+                          </span>
+                          <div id='page'>
+                              <span></span>
+                              <span></span>
+                              <span>...</span>
+                              <span></span>
+                              <span></span>
+                          </div>
+                          <span>
+                              <img src='./images/pc/pm/page_right.svg' />
+                          </span>
+                      </div>
+                      <span>Last</span>
+                  </div>
+                   -->
+              </div>
+            </div>
+            <!-- 这个是STATUS HISTORY -->
+            <div class="history" name="change" style="display: none;">
+              <h1>Status history</h1>    
+              <div class="row">
+              <li>09/01/2021 9:35AM</li>
+              <li><span>PM12345AR1234: </span> Payment Method</li>
+              <li>Cheque → PAD</li>
+              <li><img src="./images/pc/pm/head_pic.png"/>Jay Kirkland</li>
+            </div>
           <div class="bottom_submit">
             <div class="cancel">Cancel</div>
             <div class="next">Next</div>
           </div>
-        </div>
+            </div>
       <div>
 
     </div>
@@ -86,5 +174,8 @@
 </div>
 
 </div>
+<script type="text/javascript">
+  document.getElementsByClassName('navigation_info')[0].innerHTML+='<div style="position:absolute;bottom:0;right:0;">111</div>'
+</script>
   </body>
 </html>

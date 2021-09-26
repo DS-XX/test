@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/row_line.css" />
+    <link rel="stylesheet" href="/pm/style/calender.min.css" />
+    <link rel="stylesheet" href="/pm/style/modal.css" />
+    <link rel="stylesheet" href="/pm/style/table.css" />
+
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <%- partial("./public_component/pm_head_white.ejs")%>
+                <div class="contain_main">
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <!-- PROPERTY INFO -->
+                  <div class="view_info_white">
+                    <div class="navigation_info">
+                      <h1>PROPERTY INFO</h1>
+                      <h2>ADDress:57355 NO.3a</h2>
+                      <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquams</p>
+                      <p>
+                        Ref ID: R008-2021-07-0002
+                      </p>
+                      <p>PM ID: PM12345</p>
+                    </div>
+                    <div>
+                      <span style="background: #2262C6;" id="renew">Renew Term</span>
+                      <span style="background: #FF5B60;"  id="terminate">Terminate</span>
+                      <span style="background: #00517D;"  id="edit">Edit</span>
+                    </div>
+                  </div>
+                   <!-- PROPERTY -->
+                  <div class="property_input">
+                    <div class="left">
+                      <h1>Property</h1>
+                      <div class="row_line">
+                        <div>
+                          <h1>Apt # (optional)</h1>
+                          <p class="view_input" class="view_input" >Apt 123 1234 Marine Dr</p>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>City</h1>
+                          <p class="view_input" >Vancouver</p>
+                        </div>
+                        <div>
+                          <h1>Province</h1>
+                          <p class="view_input">123</p>
+
+                        </div>
+                        <div>
+                          <h1>Country</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Postal Code</h1>
+                          <p class="view_input">123</p>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Type</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Rentable Area (optional)</h1>
+                          <p class="view_input">123</p>
+                        </div>
+                      </div>
+                      <div class="row_line">
+                        <div>
+                          <h1>Description (optional)</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="right">
+                      <h1>Upload Photo</h1>
+                      <div>
+                        <img
+                        src='/images/pc/pm/pic.svg'
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <!-- TENANCY DETAIL  -->
+                  <div class="property_detail">
+                    <h1>Tenancy Detail</h1>
+                    <div class="row_space">
+                      <div class="row_line">
+                        <div>
+                          <h1>Gross Rent</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                        <div>
+                          <h1>Parking (optional)</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                        <div>
+                          <h1>Utility (optional)</h1>
+                          <p class="view_input">123</p>
+                        </div>
+                        <div>
+                          <h1>Other Income(optional)</h1>
+                          <p class="view_input" >123</p>
+                        </div>
+                      </div>
+                      <div>
+                        Total Monthly Income:
+                        <p class="view_input color_skyblue" >123</p>
+                      </div>
+                    </div>
+                    <div class="bottom20">
+                      <h1>Deposit (optional)</h1>
+                      <p class="view_input" >123</p>
+
+                    </div>
+                    <div class="bottom20">
+                      <h1>Gross Rent</h1>
+                      <p class="view_input" >123</p>
+
+                    </div>
+                    <div class="bottom20">
+                      <h1>Open Balance (optional)</h1>
+                      <p class="view_input">123</p>
+                    </div>
+                    <!-- 下面的日历和时间差 -->
+                    <div class="row_space">
+                      <div class="row_line">
+                          <div>
+                            <h1>Start date</h1>
+                            <p class="view_input" >123</p>
+                          </div>
+                          <div>
+                            <h1>Expiry date</h1>
+                            <p class="view_input">123</p>
+                          </div>
+
+                      </div>
+                      <div>
+                        <span id="TimeD">
+                            Term: 8 Months
+                        </span>
+                      </div>
+                        </div>
+                  </div>
+                  <div class="bottom_submit">
+                    <div class="next">Next</div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <!-- 这个是renew -->
+     <div class="black_background" id="renew_out">
+      <div class="my_modal" id="renew_modal" style="width:650px">
+        <div class="head_blue" style="background:#2262C6;color: #FFFFFF;">
+          Renew Management Term
+         </div>
+     <div class="property_contain">
+        <!-- 引入公共样式 -->
+        <%- partial("./public_component/property_modal_public.ejs")%>
+        <div>
+          <h1>Extend Months</h1>
+          <input type="number"/>
+        </div>
+        <div>
+          <h1>Renew Fee</h1>
+          <input type="number"/>
+        </div>
+        <div>
+          <h1>GST</h1>
+          <p>$100</p>
+        </div>
+        <div class="row" style="justify-content: space-between;margin-bottom: 40px;">
+          <h1>Balance in Trust</h1>
+          <h1 style="color: #00ADAD;">$1,234.00</h1>
+        </div>
+        <div class="bottom_submit" style="justify-content: flex-start;">
+          <div class="cancel">Cancel</div>
+          <div class="next">Save</div>
+
+        </div>
+      </div>
+   </div>
+   </div>
+
+    <!-- 这个是terminate -->
+    <div class="black_background" id='terminate_out'>
+      <div class="my_modal" id="terminate_modal" style="width:650px">
+        <div class="head_blue" style="background: #FF5B60;">
+          Terminate Management Term
+       </div>
+       <div class="property_contain">
+          <h1>Termination Date</h1>
+          <div id="begin-date" class="row_start_start" style="width: 300px;margin: 10px 0;"></div>
+          <!-- 引入公共样式 -->
+          <%- partial("./public_component/property_modal_public.ejs")%>
+          <div style="margin-bottom: 20px;">
+            <h1>Deposit</h1>
+            <p>$635.00</p>
+          </div>
+          <div class="row" style="justify-content: space-between;margin-bottom: 40px;">
+            <h1>Balance in Trust</h1>
+            <h1 style="color: #00ADAD;">$1,234.00</h1>
+          </div>
+          <div class="bottom_submit" style="justify-content: flex-start;">
+            <div class="cancel">Cancel</div>
+            <div class="next">Save</div>
+          </div>
+       </div>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="/pm/js/modal.js"></script>
+  <script type="text/javascript">
+    window.onload=function(){
+      document.getElementById("renew").onclick=function(){
+      modal('renew','renew_modal','renew_out')
+    }
+    document.getElementById("terminate").onclick=function(){
+      modal('terminate','terminate_modal','terminate_out')
+    };
+    }
+
+    //  document.getElementById("edit").onclick=function(){
+    //   modal('edit','edit_modal','black_background')
+    // };
+   </script>
+   <script type="text/javascript" src="/pm/js/calendar.min.js"></script>
+   <script type="text/javascript" src="/pm/js/calendar.js"></script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>

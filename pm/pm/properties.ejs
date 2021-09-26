@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title><%= __('Welcome')%></title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="/swiper/swiper.min.css">-->
+    <link rel="stylesheet" href="/styles/pc/style.css" />
+    <link rel="stylesheet" href="/pm/style/properties.css" />
+    <link rel="stylesheet" href="/pm/style/table.css" />
+
+    <!--<script type="text/javascript" src="/swiper/swiper.min.js"></script>-->
+
+    <link rel="stylesheet" href="/layui/css/layui.css" />
+    <script src="/layui/layui.js"></script>
+  </head>
+  <body>
+    <style type="text/css">
+    </style>
+    <div class="deal-list-body">
+      <div class="user-content">
+        <div class="blue-bar">
+          <img src="/images/pc/blue-bar.svg" alt="" />
+          <%- partial("./burgerBtn.ejs")%>
+        </div>
+        <div class="main-part">
+          <div class="breadcrumb-div">
+            <div class="breadcrumb-content">
+              <a href="" class="breadcrumb-item">Mobile Realty</a>
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a href="/pc/user/userPage" class="breadcrumb-item"
+                ><%= __('pc_userPage_my_personal_center')%></a
+              >
+              <img
+                src="/images/pc/bread-arrow.svg"
+                alt=""
+                class="bread-arrow"
+              />
+              <a
+                href="/pc/user/registeredAgentPageMyListing"
+                class="breadcrumb-item current-item"
+                >Property Management</a
+              >
+            </div>
+          </div>
+          <div class="user-center-area">
+            <%- partial("../user/userSideMenu.ejs", {linkKind : 'myPM'})%>
+            <div class="user-center-content" style="padding: 0;">
+              <div class="navigation">
+                <!-- 白色地的顶部 查找 -->
+                <div class="pm_head_white">
+                  <img
+                    src='/images/pc/pm/head1.svg'
+                    alt=''
+                  />
+                  <img
+                    src='/images/pc/pm/head2.svg'
+                    alt=''
+                  />
+                  <img
+                    src='/images/pc/pm/head3.svg'
+                    alt=''
+                    />
+                  <div class="search">
+                    <input class="view_input" placeholder="Search" />
+                    <img src='/images/pc/pm/head_search.svg' />
+                  </div>
+                </div>
+                <div class="contain_main">
+                  <!-- 导航 箭头 -->
+                  <%- partial("./public_component/head_right.ejs")%>
+                  <div class="title_properties">
+                    <h1>PROPERTIES</h1>
+                    <span>Add New</span>
+                </div>
+                <div class="properties_card">
+                    <div class="top_content">
+                        <div class="left_filter">
+                            Filter by:
+                            <select><option>New Westminster</option></select>
+                            <select><option>ACTIVE</option></select>
+                        </div>
+                        <div class="right_search">
+                            Search:
+                            <input style="max-width:100px"/>
+                            <input style="max-width:100px"/>
+                            <input style="max-width:250px"/>
+                            <span>Search</span>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr id='t_head'>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th><img src="/images/pc/pm/pic.png" style="width:82px;height:65px;" /></th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>PM12345</th>
+                                <th>1234</th>
+                                <th>12345</th>
+                                <th>PM12345</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottom">
+                        <p class="Viewing">Viewing 6 out of 100</p>
+                        <div class="bottom_total">
+                            Total:
+                            <div>
+                                <span>$1,000,000</span>
+                                <span>$1,000,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom_page">
+                        <span>First</span>
+                        <div class="middle">
+                            <span>
+                                <img src='/images/pc/pm/page_left.svg' />
+                            </span>
+                            <div id='page'>
+                                <span></span>
+                                <span></span>
+                                <span>...</span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>
+                                <img src='/images/pc/pm/page_right.svg' />
+                            </span>
+                        </div>
+                        <span>Last</span>
+                    </div>
+
+                </div>
+                </div>
+              <div>
+
+            </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+<!-- 插入表格 -->
+<script type="text/javascript">
+const name = new Array('PM ID','LANDLORD', 'PHOTO' ,'PROPERTY ADDRESS','CITY' ,'DECSC-RIPTION','MONTHS LEFT','MONTHLY INCOME','BALANCE IN TRUST' ,'STATUS');
+console.log(typeof(name));
+for(var i=0;i<name.length;i++){
+    if(i<4){
+        document.getElementById('t_head').innerHTML+=`<th>${name[i]}</th>`;
+    }
+    else{
+        document.getElementById('t_head').innerHTML+=`<th><select><option>${name[i]}</option></select></th>`;
+    }
+
+}
+</script>
+<!-- 点击后变背景颜色 -->
+<script type="text/javascript">
+var curObj = null;
+var preColor;
+onload = function(){
+    var a = document.getElementById("page").getElementsByTagName("span");
+    console.log(a,'这个是a');
+    for(var i=0;i<a.length;i++){
+        a[i].onclick = (function(obj){
+            return function(){
+                if(curObj!=null) curObj.style.backgroundColor = preColor;
+                preColor = obj.style.backgroundColor;
+                obj.style.backgroundColor = "#F6F8F7";
+                curObj = obj;
+            }
+        })(a[i]);
+    }
+}
+</script>
+  <script type="text/javascript" src="/js/jquery-2.2.2.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="/js/pc/script.js"></script>
+  <script type="text/javascript">
+    var width = document.body.clientWidth - 72;
+    layui.use("table", function () {
+      var table = layui.table;
+      table.init("demo", {
+        width: width,
+        height: 500, //设置高度
+        done: function (res, curr, count) {
+          $("table").css("width", "100%");
+        },
+      });
+    });
+
+
+   </script>
+</html>
